@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const lines = [
   { text: '', delay: 400, type: 'empty' },
@@ -13,6 +13,18 @@ const lines = [
   { text: '', delay: 300, type: 'empty' },
   { text: '$ status', delay: 500, type: 'command' },
   { text: '', delay: 300, type: 'empty' },
+]
+
+const statusMessages = [
+  'Ready to build something useful.',
+  "Let's turn your ideas into reliable systems.",
+  'Have a problem worth solving?',
+  "Let's build the solution.",
+  'Simplify your business.',
+  'Automate the workflow.',
+  'Build a better system.',
+  'Turning business problems into digital solutions.',
+  'From Interface to Infrastructure.',
 ]
 
 function useReducedMotion() {
@@ -30,6 +42,8 @@ function useReducedMotion() {
 export default function DeveloperTerminal() {
   const reduced = useReducedMotion()
   const [visibleLines, setVisibleLines] = useState(reduced ? lines.length : 0)
+  const [statusText, setStatusText] = useState('')
+  const started = useRef(false)
 
   useEffect(() => {
     let interval
@@ -55,6 +69,56 @@ export default function DeveloperTerminal() {
 
     return () => clearTimeout(interval)
   }, [reduced])
+
+  useEffect(() => {
+    if (visibleLines < lines.length) return
+
+    if (reduced) {
+      setStatusText(statusMessages[0])
+      return
+    }
+
+    if (started.current) return
+    started.current = true
+
+    let messageIndex = 0
+    let charIndex = 0
+    let isDeleting = false
+    let timer
+
+    const tick = () => {
+      const currentMessage = statusMessages[messageIndex]
+
+      if (!isDeleting) {
+        charIndex++
+        setStatusText(currentMessage.slice(0, charIndex))
+
+        if (charIndex === currentMessage.length) {
+          timer = setTimeout(() => {
+            isDeleting = true
+            tick()
+          }, 3500)
+          return
+        }
+        timer = setTimeout(tick, 85)
+      } else {
+        charIndex--
+        setStatusText(currentMessage.slice(0, charIndex))
+
+        if (charIndex === 0) {
+          isDeleting = false
+          messageIndex = (messageIndex + 1) % statusMessages.length
+          timer = setTimeout(tick, 700)
+          return
+        }
+        timer = setTimeout(tick, 55)
+      }
+    }
+
+    timer = setTimeout(tick, 700)
+
+    return () => clearTimeout(timer)
+  }, [reduced, visibleLines])
 
   return (
     <div
@@ -92,13 +156,27 @@ export default function DeveloperTerminal() {
           )
         })}
         {visibleLines >= lines.length && (
-          <div className="flex items-center mt-1">
-            <span className="text-green-bright mr-2 shrink-0">$</span>
-            <span
-              className="inline-block w-2.5 h-5 bg-green-bright animate-[blinkCursor_1s_step-end_infinite]"
-              aria-hidden="true"
-            />
-          </div>
+          <>
+            <div className="flex mt-4">
+              <span className="text-green-bright text-sm">
+                <span className="inline-block w-2 h-2 rounded-full bg-green-bright mr-2 align-middle animate-pulse" aria-hidden="true" />
+                OPEN FOR PROJECTS
+              </span>
+            </div>
+            <div className="flex items-baseline mt-2 min-h-[1.75rem]">
+              <span className="text-green-bright/80 mr-2 shrink-0">&gt;</span>
+              <span className="text-text-secondary">{statusText}</span>
+              {!reduced && (
+                <span
+                  className="inline-block w-2.5 h-5 bg-green-bright animate-[blinkCursor_1s_step-end_infinite] ml-0.5"
+                  aria-hidden="true"
+                />
+              )}
+            </div>
+            <div className="flex items-center mt-2">
+              <span className="text-green-bright mr-2 shrink-0">$</span>
+            </div>
+          </>
         )}
       </div>
 
