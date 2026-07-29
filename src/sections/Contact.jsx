@@ -1,14 +1,6 @@
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import { socialLinks } from '../data/socialLinks'
-import { Mail, Github, Linkedin } from 'lucide-react'
-
-const channels = [
-  { key: 'email', icon: Mail, label: 'Email', href: socialLinks.email ? `mailto:${socialLinks.email}` : null },
-  { key: 'github', icon: Github, label: 'GitHub', href: socialLinks.github },
-  { key: 'linkedin', icon: Linkedin, label: 'LinkedIn', href: socialLinks.linkedin },
-]
-
-const availableChannels = channels.filter((c) => c.href)
+import { Mail } from 'lucide-react'
 
 export default function Contact() {
   const { ref, isVisible } = useScrollReveal()
@@ -53,28 +45,27 @@ export default function Contact() {
 
             <div className="p-5 md:p-6 font-mono text-sm leading-relaxed">
               <p className="text-green-bright mb-1">$ contact matheus</p>
-              <p className="text-green-bright/80 mb-1">&gt; Ready for collaboration.</p>
+              <p className="text-green-bright/80 mb-3">&gt; Ready for collaboration.</p>
 
-              {availableChannels.length > 0 ? (
+              {socialLinks.email ? (
                 <>
-                  <p className="text-text-muted mb-4">&gt; Select a channel:</p>
-                  <div className="flex flex-wrap gap-3 mb-5">
-                    {availableChannels.map((channel) => {
-                      const Icon = channel.icon
-                      return (
-                        <a
-                          key={channel.key}
-                          href={channel.href}
-                          target={channel.key !== 'email' ? '_blank' : undefined}
-                          rel={channel.key !== 'email' ? 'noopener noreferrer' : undefined}
-                          className="inline-flex items-center gap-2 px-4 py-2 border border-border-default text-text-secondary rounded-md hover:border-green-bright hover:text-green-bright transition-all duration-200 text-sm"
-                        >
-                          <Icon size={14} />
-                          {channel.label}
-                        </a>
-                      )
-                    })}
-                  </div>
+                  <p className="text-text-muted mb-1">&gt; Email:</p>
+                  <a
+                    href={`mailto:${socialLinks.email}`}
+                    className="block font-mono text-text-secondary hover:text-green-bright transition-colors duration-200 mb-4"
+                  >
+                    {socialLinks.email}
+                  </a>
+                  <a
+                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(socialLinks.email)}&su=${encodeURIComponent("Let's Discuss a Project with Matheus")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 border border-border-default text-text-secondary rounded-md hover:border-green-bright hover:text-green-bright transition-all duration-200 text-sm"
+                    aria-label="Send email to Matheus via Gmail"
+                  >
+                    <Mail size={14} />
+                    Send Email
+                  </a>
                 </>
               ) : (
                 <p className="text-text-muted mb-4">
@@ -82,7 +73,7 @@ export default function Contact() {
                 </p>
               )}
 
-              <div className="flex items-center mt-2">
+              <div className="flex items-center mt-4">
                 <span className="text-green-bright mr-2 shrink-0">$</span>
                 <span
                   className="inline-block w-2.5 h-5 bg-green-bright animate-[blinkCursor_1s_step-end_infinite]"

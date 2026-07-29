@@ -1,5 +1,40 @@
 import { useState, useEffect } from 'react'
+import {
+  SiJavascript,
+  SiReact,
+  SiNodedotjs,
+  SiPostgresql,
+  SiSap,
+  SiHtml5,
+  SiCss,
+  SiTailwindcss,
+  SiVite,
+  SiGit,
+  SiDocker,
+  SiLinux,
+  SiNginx,
+  SiMikrotik,
+  SiUbiquiti,
+} from 'react-icons/si'
 import { techMarquee } from '../data/skills'
+
+const iconMap = {
+  JavaScript: SiJavascript,
+  React: SiReact,
+  'Node.js': SiNodedotjs,
+  PostgreSQL: SiPostgresql,
+  'SAP HANA': SiSap,
+  HTML5: SiHtml5,
+  CSS3: SiCss,
+  'Tailwind CSS': SiTailwindcss,
+  Vite: SiVite,
+  Git: SiGit,
+  Docker: SiDocker,
+  Linux: SiLinux,
+  Nginx: SiNginx,
+  MikroTik: SiMikrotik,
+  Ubiquiti: SiUbiquiti,
+}
 
 function useReducedMotion() {
   const [reduced, setReduced] = useState(false)
@@ -23,7 +58,7 @@ export default function TechMarquee() {
       aria-label="Technologies"
     >
       <div
-        className={`flex items-center h-[50px] md:h-[64px] overflow-hidden ${
+        className={`flex items-center h-[56px] md:h-[72px] overflow-hidden ${
           reduced ? '' : 'group'
         }`}
       >
@@ -34,17 +69,28 @@ export default function TechMarquee() {
               : '[animation:marquee_35s_linear_infinite] group-hover:[animation-play-state:paused]'
           }`}
         >
-          {items.map((tech, i) => (
-            <span
-              key={`${tech}-${i}`}
-              className="font-mono text-sm text-text-muted hover:text-green-bright transition-colors duration-200 select-none"
-            >
-              {tech}
-            </span>
-          ))}
+          {items.map((item, i) => {
+            const Icon = iconMap[item.name]
+            return (
+              <span
+                key={`${item.name}-${i}`}
+                className="inline-flex items-center gap-2.5 whitespace-nowrap font-mono text-sm text-text-muted select-none transition-all duration-200 hover:text-text-secondary"
+              >
+                {Icon && (
+                  <Icon
+                    className="inline-block transition-all duration-200 opacity-80 hover:opacity-100 hover:scale-105"
+                    size={20}
+                    color={item.color}
+                    aria-hidden="true"
+                    style={{ flexShrink: 0 }}
+                  />
+                )}
+                {item.name}
+              </span>
+            )
+          })}
         </div>
       </div>
-
     </section>
   )
 }
