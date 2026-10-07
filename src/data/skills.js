@@ -74,6 +74,7 @@ export const skills = [
       "Application Deployment",
       "Reverse Proxy",
       "Server Management",
+      "Proxmox",
     ],
     description:
       "Deploying and managing web applications and supporting services across Linux-based environments.",
@@ -97,9 +98,22 @@ export const skills = [
       "Understanding and configuring network infrastructure that supports applications, devices, and internal systems.",
   },
   {
+    id: "languages",
+    label: "LANGUAGES",
+    number: "07",
+    skills: [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "PHP",
+    ],
+    description:
+      "Programming languages I use to build frontend interfaces, backend services, and automation.",
+  },
+  {
     id: "tools",
     label: "TOOLS",
-    number: "07",
+    number: "08",
     skills: [
       "Git",
       "GitHub",

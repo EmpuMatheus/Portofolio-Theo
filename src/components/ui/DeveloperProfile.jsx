@@ -2,6 +2,7 @@ export default function DeveloperProfile() {
   const items = [
     { label: 'NAME', value: 'Matheus' },
     { label: 'ROLE', value: 'Web Developer & System Builder' },
+    { label: 'LANGUAGES', value: 'JavaScript / TypeScript / Python' },
     { label: 'FRONTEND', value: 'React / Vite / Tailwind CSS' },
     { label: 'BACKEND', value: 'Node.js / Express' },
     { label: 'DATABASE', value: 'PostgreSQL / SAP HANA / SQLite' },
