@@ -1,0 +1,1781 @@
+# Development Task Roadmap
+# Matheus — Web Developer & System Builder
+
+**Document:** TASK.md  
+**Project:** Personal Portfolio  
+**Owner:** Matheus  
+**Version:** 1.0  
+**Status:** Ready for Development
+
+---
+
+# 1. Purpose
+
+This document defines the implementation roadmap for the Matheus personal portfolio.
+
+OpenCode must use this file as the development checklist.
+
+Development must follow the documentation:
+
+```text
+docs/
+├── PRD.md
+├── UI_UX.md
+├── CONTENT.md
+└── TASK.md
+```
+
+Document responsibilities:
+
+```text
+PRD.md
+→ Product requirements and scope
+
+UI_UX.md
+→ Visual design and interaction rules
+
+CONTENT.md
+→ Portfolio content and personal information
+
+TASK.md
+→ Development order and implementation checklist
+```
+
+---
+
+# 2. Development Rules
+
+Before writing or modifying code:
+
+1. Read `PRD.md`.
+2. Read `UI_UX.md`.
+3. Read `CONTENT.md`.
+4. Read `TASK.md`.
+5. Inspect the existing project structure.
+6. Inspect existing dependencies.
+7. Do not overwrite working code unnecessarily.
+8. Do not invent missing personal information.
+9. Do not add features outside the documented scope.
+10. Keep components reusable and data-driven.
+
+If documentation conflicts:
+
+```text
+Product behavior → PRD.md
+
+Visual presentation → UI_UX.md
+
+Portfolio content → CONTENT.md
+
+Implementation order → TASK.md
+```
+
+---
+
+# 3. Important Workflow Rule
+
+Do NOT attempt to implement the entire portfolio in one large step.
+
+Work phase by phase.
+
+After completing a phase:
+
+```text
+1. Verify the implementation.
+2. Fix errors.
+3. Run the application.
+4. Check responsive behavior.
+5. Run build when appropriate.
+6. Mark completed tasks in TASK.md.
+7. Continue to the next phase.
+```
+
+Update tasks:
+
+```text
+[ ] Pending
+
+[x] Completed
+```
+
+Do not mark a task complete until it is actually implemented.
+
+---
+
+# 4. Definition of Done
+
+A task is considered complete only when:
+
+- Implementation exists
+- No obvious runtime error exists
+- Layout works on desktop
+- Layout works on mobile
+- No horizontal overflow exists
+- Content follows `CONTENT.md`
+- Design follows `UI_UX.md`
+- Existing functionality is not broken
+
+---
+
+# PHASE 0 — PROJECT ANALYSIS
+
+## Goal
+
+Understand the existing project before changing anything.
+
+### Tasks
+
+- [x] Read all files inside `/docs`
+- [x] Inspect project directory
+- [x] Inspect `package.json`
+- [x] Identify React version
+- [x] Identify Vite version
+- [x] Identify Tailwind configuration
+- [x] Identify existing dependencies
+- [x] Identify existing components
+- [x] Identify existing styles
+- [x] Identify existing assets
+- [x] Identify existing routing
+- [x] Identify potential conflicts
+- [x] Identify unused starter/template code
+
+### Required Output
+
+Before major implementation, understand:
+
+```text
+Current project state
+Existing dependencies
+Reusable code
+Missing dependencies
+Potential cleanup
+```
+
+Do NOT rebuild working configuration without a reason.
+
+---
+
+# PHASE 1 — PROJECT FOUNDATION
+
+## Goal
+
+Prepare a clean and scalable portfolio architecture.
+
+### Tasks
+
+- [x] Remove unnecessary Vite starter content
+- [x] Create application folder structure
+- [x] Configure global styles
+- [x] Configure design tokens
+- [x] Configure typography
+- [x] Configure base responsive behavior
+- [x] Configure smooth scrolling
+- [x] Configure reduced-motion support
+- [x] Verify development server
+- [x] Verify production build
+
+Recommended structure:
+
+```text
+src/
+├── assets/
+│
+├── components/
+│   ├── common/
+│   ├── layout/
+│   └── ui/
+│
+├── sections/
+│
+├── pages/
+│
+├── data/
+│
+├── hooks/
+│
+├── utils/
+│
+├── styles/
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+# PHASE 2 — DEPENDENCIES
+
+## Goal
+
+Install only dependencies actually required by the portfolio.
+
+### Required / Preferred
+
+Evaluate whether the project needs:
+
+```text
+framer-motion
+lucide-react
+react-router-dom
+```
+
+Use existing dependencies when available.
+
+### Rules
+
+- [x] Avoid unnecessary packages
+- [x] Do not install Three.js
+- [x] Do not install particle libraries
+- [x] Do not install large UI frameworks
+- [x] Prefer CSS for simple animations
+- [x] Prefer native browser functionality where practical
+
+After dependency changes:
+
+```bash
+npm run build
+```
+
+must succeed.
+
+---
+
+# PHASE 3 — DESIGN SYSTEM
+
+## Goal
+
+Create the visual foundation defined in `UI_UX.md`.
+
+### Tasks
+
+- [x] Create background color tokens
+- [x] Create surface color tokens
+- [x] Create text color tokens
+- [x] Create green accent tokens
+- [x] Create purple ambient accent
+- [x] Create border tokens
+- [x] Create spacing rules
+- [x] Create typography rules
+- [x] Create container utilities
+- [x] Create section spacing utilities
+- [x] Create focus styles
+- [x] Create reusable button styles
+- [x] Create reusable technical label styles
+
+Core palette:
+
+```text
+Background Primary
+#050914
+
+Background Secondary
+#080E1C
+
+Surface
+#0B1220
+
+Primary Green
+#22C55E
+
+Bright Green
+#4ADE80
+
+Primary Text
+#F8FAFC
+
+Secondary Text
+#94A3B8
+
+Purple Ambient
+#8B5CF6
+```
+
+Do not introduce unrelated colors.
+
+---
+
+# PHASE 4 — TYPOGRAPHY
+
+## Goal
+
+Create consistent developer-oriented typography.
+
+### Tasks
+
+- [x] Configure primary interface font
+- [x] Configure monospace font
+- [x] Configure heading hierarchy
+- [x] Configure responsive hero typography
+- [x] Configure paragraph typography
+- [x] Configure technical labels
+- [x] Prevent typography layout shifts
+
+Preferred:
+
+```text
+Interface
+Geist / Inter
+
+Code
+JetBrains Mono
+```
+
+Do not load excessive font weights.
+
+---
+
+# PHASE 5 — CONTENT DATA LAYER
+
+## Goal
+
+Separate portfolio content from UI components.
+
+Create:
+
+```text
+src/data/
+├── profile.js
+├── navigation.js
+├── skills.js
+├── capabilities.js
+├── projects.js
+├── experience.js
+└── socialLinks.js
+```
+
+### Tasks
+
+- [x] Create profile data
+- [x] Create navigation data
+- [x] Create skills data
+- [x] Create capabilities data
+- [x] Create projects data
+- [x] Create experience data
+- [x] Create social link data
+
+Use `CONTENT.md` as source of truth.
+
+### Important
+
+Missing links must use:
+
+```javascript
+null
+```
+
+Example:
+
+```javascript
+github: null,
+linkedin: null,
+email: null
+```
+
+Never invent URLs.
+
+---
+
+# PHASE 6 — GLOBAL BACKGROUND
+
+## Goal
+
+Create the subtle technical atmosphere.
+
+### Tasks
+
+- [x] Add dark global background
+- [x] Add subtle grid
+- [x] Add developer symbol pattern if appropriate
+- [x] Add reusable ambient glow component
+- [x] Verify readability
+- [x] Reduce effects on mobile
+- [x] Verify no performance issue
+
+Allowed symbols:
+
+```text
+{}
+</>
+[]
+#
+_
+01
+()
+```
+
+Pattern opacity must remain extremely low.
+
+---
+
+# PHASE 7 — NAVBAR
+
+## Goal
+
+Implement responsive primary navigation.
+
+### Desktop
+
+Create:
+
+```text
+<Matheus />      About  Skills  Projects  Experience  Contact
+```
+
+### Tasks
+
+- [x] Create `Navbar` component
+- [x] Add `<Matheus />` wordmark
+- [x] Add navigation links
+- [x] Implement smooth section navigation
+- [x] Implement active section state
+- [x] Implement sticky/fixed behavior
+- [x] Implement scrolled navbar appearance
+- [x] Add accessible focus states
+
+### Mobile
+
+- [x] Create hamburger button
+- [x] Create mobile menu
+- [x] Add open/close animation
+- [x] Close menu after navigation
+- [x] Close menu with Escape
+- [x] Add appropriate ARIA attributes
+- [x] Prevent navigation overflow
+
+---
+
+# PHASE 8 — HERO STRUCTURE
+
+## Goal
+
+Create the primary personal-branding section.
+
+### Tasks
+
+- [x] Create `Hero` component
+- [x] Add greeting
+- [x] Add MATHEUS heading
+- [x] Add role
+- [x] Add description
+- [x] Add View Projects CTA
+- [x] Add Contact CTA
+- [x] Add social links conditionally
+- [x] Add developer workspace area
+- [x] Add background ambient glow
+- [x] Add responsive layout
+
+Content must come from:
+
+```text
+CONTENT.md
+```
+
+---
+
+# PHASE 9 — DEVELOPER TERMINAL
+
+## Goal
+
+Create the main technical visual in the Hero.
+
+Create reusable component:
+
+```text
+DeveloperTerminal
+```
+
+### Content
+
+```text
+matheus@workspace
+
+$ whoami
+
+Matheus
+Web Developer & System Builder
+
+$ focus
+
+Web Applications
+Business Systems
+Infrastructure
+
+$ status
+
+● ONLINE
+Building useful things...
+```
+
+### Tasks
+
+- [x] Build terminal window
+- [x] Build terminal header
+- [x] Add window controls
+- [x] Add terminal commands
+- [x] Add status
+- [x] Add blinking cursor
+- [x] Add initial typing sequence
+- [x] Ensure animation runs only once
+- [x] Implement reduced-motion fallback
+- [x] Optimize mobile terminal content
+
+Do not use a fake terminal library unless necessary.
+
+Prefer HTML/CSS.
+
+---
+
+# PHASE 10 — FLOATING CODE EDITOR
+
+## Goal
+
+Add depth to the developer workspace.
+
+Create:
+
+```text
+CodeEditorCard
+```
+
+Use content from `CONTENT.md`.
+
+### Tasks
+
+- [x] Create code editor window
+- [x] Add file tab
+- [x] Add code content
+- [x] Add minimal syntax styling
+- [x] Position overlapping terminal on desktop
+- [x] Add subtle shadow/glow
+- [x] Ensure no overflow
+- [x] Simplify on tablet
+- [x] Hide or reposition on small mobile
+
+Do not embed a real code editor.
+
+---
+
+# PHASE 11 — HERO DECORATION
+
+## Goal
+
+Complete the developer workspace visual.
+
+### Tasks
+
+- [x] Add subtle green ambient glow
+- [x] Add subtle purple ambient glow
+- [x] Add optional abstract connecting line
+- [x] Add minimal decorative technical symbols
+- [x] Verify text contrast
+- [x] Verify mobile performance
+
+Avoid:
+
+```text
+Particle systems
+Large animated gradients
+WebGL
+Heavy SVG animation
+```
+
+---
+
+# PHASE 12 — TECHNOLOGY MARQUEE
+
+## Goal
+
+Display the technical ecosystem immediately after Hero.
+
+Create:
+
+```text
+TechMarquee
+```
+
+### Tasks
+
+- [x] Render technologies from data
+- [x] Add technology icons when appropriate
+- [x] Create infinite CSS marquee
+- [x] Duplicate items correctly for seamless loop
+- [x] Pause on hover
+- [x] Add reduced-motion behavior
+- [x] Verify mobile layout
+
+Animation target:
+
+```text
+25–40 seconds
+```
+
+Movement should be slow and subtle.
+
+---
+
+# PHASE 13 — ABOUT SECTION
+
+## Goal
+
+Explain Matheus' technical identity.
+
+Create:
+
+```text
+About
+```
+
+### Tasks
+
+- [x] Add section label
+- [x] Add heading
+- [x] Add primary About text
+- [x] Add secondary About text
+- [x] Create two-column desktop layout
+- [x] Create mobile stacked layout
+- [x] Add scroll reveal
+
+Do not make the section overly long.
+
+---
+
+# PHASE 14 — DEVELOPER PROFILE PANEL
+
+## Goal
+
+Create an original alternative to generic GitHub contribution widgets.
+
+Create:
+
+```text
+DeveloperProfile
+```
+
+### Display
+
+```text
+DEVELOPER.PROFILE
+
+Frontend
+React / Vite / Tailwind
+
+Backend
+Node.js / Express
+
+Database
+PostgreSQL / SAP HANA
+
+Infrastructure
+Linux / Docker / Nginx
+
+Network
+MikroTik / Ubiquiti
+
+STATUS
+● ONLINE
+```
+
+### Tasks
+
+- [x] Create technical panel
+- [x] Render profile data
+- [x] Add status indicator
+- [x] Add subtle hover interaction
+- [x] Ensure mobile readability
+
+---
+
+# PHASE 15 — SKILLS SECTION
+
+## Goal
+
+Present actual capabilities without fake proficiency metrics.
+
+Create:
+
+```text
+Skills
+SkillCategory
+SkillItem
+```
+
+### Categories
+
+```text
+Frontend
+Backend
+Database
+Enterprise
+Infrastructure
+Networking
+Tools
+```
+
+### Tasks
+
+- [x] Render skills from data
+- [x] Create responsive grid
+- [x] Add category labels
+- [x] Add technology items
+- [x] Add optional icons
+- [x] Add subtle hover states
+- [x] Verify mobile grid
+
+Do NOT implement:
+
+```text
+React 95%
+Node.js 90%
+Linux 85%
+```
+
+---
+
+# PHASE 16 — WHAT I BUILD
+
+## Goal
+
+Show capabilities as solutions rather than only technologies.
+
+Create:
+
+```text
+Capabilities
+CapabilityCard
+```
+
+Cards:
+
+```text
+Web Applications
+Business Systems
+Backend & API
+Database Integration
+Infrastructure
+Networking
+```
+
+### Tasks
+
+- [x] Create section
+- [x] Render capabilities from data
+- [x] Add icons
+- [x] Create responsive layout
+- [x] Add subtle hover
+- [x] Avoid excessive card styling
+
+---
+
+# PHASE 17 — FEATURED PROJECTS
+
+## Goal
+
+Make real projects the strongest section after Hero.
+
+Create:
+
+```text
+Projects
+FeaturedProject
+ProjectTags
+```
+
+### Projects
+
+```text
+01 — WHS Digital
+
+02 — Evolve.ina
+
+03 — Enterprise Data Integration
+```
+
+### Tasks
+
+- [x] Render projects from `projects.js`
+- [x] Create large editorial layout
+- [x] Add project number
+- [x] Add project category
+- [x] Add description
+- [x] Add technologies
+- [x] Add screenshot
+- [x] Add Case Study link
+- [x] Add GitHub button conditionally
+- [x] Add Demo button conditionally
+- [x] Add hover interaction
+- [x] Add image lazy loading
+
+---
+
+# PHASE 18 — PROJECT VISUAL RHYTHM
+
+## Goal
+
+Avoid repetitive project cards.
+
+Desktop:
+
+```text
+Project 01
+Image → Content
+
+Project 02
+Content ← Image
+
+Project 03
+Image → Content
+```
+
+### Tasks
+
+- [x] Implement alternating layout
+- [x] Keep text alignment consistent
+- [x] Ensure screenshots remain prominent
+- [x] Remove alternating layout on mobile
+- [x] Always show screenshot first on mobile
+
+---
+
+# PHASE 19 — PROJECT PLACEHOLDERS
+
+## Goal
+
+Handle missing screenshots gracefully.
+
+If a project screenshot is unavailable:
+
+Do NOT use random stock images.
+
+Create a technical placeholder:
+
+```text
+PROJECT.PREVIEW
+
+WHS DIGITAL
+
+Screenshot coming soon.
+```
+
+### Tasks
+
+- [x] Create reusable placeholder
+- [x] Automatically use it for missing images
+- [x] Maintain project layout dimensions
+
+---
+
+# PHASE 20 — PROJECT ROUTING
+
+## Goal
+
+Support project case studies.
+
+Preferred routes:
+
+```text
+/projects/whs-digital
+/projects/evolve-ina
+/projects/enterprise-data-integration
+```
+
+### Tasks
+
+- [x] Configure React Router if required
+- [x] Create project detail route
+- [x] Resolve project using project ID/slug
+- [x] Handle unknown project
+- [x] Add Return to Projects navigation
+- [x] Update document title per project
+- [x] Ensure direct route loading works in production
+
+---
+
+# PHASE 21 — PROJECT CASE STUDY
+
+## Goal
+
+Show engineering thinking behind projects.
+
+Create:
+
+```text
+ProjectDetail
+ProjectHero
+ProjectOverview
+ProjectFeatures
+ProjectTechnology
+ProjectGallery
+```
+
+Sections:
+
+```text
+Overview
+Problem
+Solution
+Features
+Architecture
+Technology
+Screenshots
+Challenges
+Results / Learnings
+```
+
+### Rules
+
+- [x] Use only available content
+- [x] Hide empty sections
+- [x] Do not invent project results
+- [x] Do not expose confidential information
+- [x] Optimize screenshots
+- [x] Keep technical content readable
+
+---
+
+# PHASE 22 — EXPERIENCE
+
+## Goal
+
+Present professional/technical experience.
+
+Create:
+
+```text
+Experience
+Timeline
+TimelineItem
+```
+
+### Important
+
+Formal employment information is currently incomplete.
+
+Until confirmed:
+
+Use technical experience highlights from `CONTENT.md`.
+
+### Tasks
+
+- [x] Create timeline component
+- [x] Render available experience data
+- [x] Support future employment entries
+- [x] Do not invent dates
+- [x] Do not invent organizations
+- [x] Do not invent job titles
+- [x] Create responsive timeline
+
+---
+
+# PHASE 23 — DEVELOPER PHILOSOPHY
+
+## Goal
+
+Create a strong visual branding break.
+
+Content:
+
+```text
+I don't just build interfaces.
+
+I build systems that solve problems.
+```
+
+Supporting:
+
+```text
+From Interface to Infrastructure.
+```
+
+### Tasks
+
+- [x] Create large typography section
+- [x] Highlight `systems`
+- [x] Add subtle technical background
+- [x] Add scroll reveal
+- [x] Ensure strong mobile typography
+
+---
+
+# PHASE 24 — CONTACT
+
+## Goal
+
+Make contacting Matheus simple.
+
+Create:
+
+```text
+Contact
+SocialLink
+```
+
+### Tasks
+
+- [x] Add section label
+- [x] Add heading
+- [x] Add description
+- [x] Render configured contact methods
+- [x] Hide missing social links
+- [x] Add optional terminal-style contact UI
+- [x] Add accessible link labels
+
+Do not display fake URLs.
+
+---
+
+# PHASE 25 — CONTACT FORM
+
+## Status
+
+Optional for V1.
+
+Only implement if a delivery method exists.
+
+Do NOT create a form that visually submits but does nothing.
+
+If no backend/form service exists:
+
+```text
+Do not show the form.
+```
+
+Use contact links instead.
+
+---
+
+# PHASE 26 — FOOTER
+
+## Goal
+
+Finish the portfolio with minimal branding.
+
+Create:
+
+```text
+Footer
+```
+
+Content:
+
+```text
+<Matheus />
+
+From Interface to Infrastructure.
+
+Designed & Built with Code.
+
+© {CURRENT_YEAR} Matheus
+```
+
+### Tasks
+
+- [x] Add dynamic year
+- [x] Add configured social links
+- [x] Add return-to-top behavior if appropriate
+- [x] Keep footer minimal
+
+---
+
+# PHASE 27 — 404 PAGE
+
+## Goal
+
+Handle invalid routes cleanly.
+
+Create:
+
+```text
+NotFound
+```
+
+Content:
+
+```text
+404
+
+$ locate page
+
+Error: resource not found.
+
+Return Home
+```
+
+### Tasks
+
+- [x] Add 404 route
+- [x] Add Return Home
+- [x] Follow portfolio design system
+- [x] Keep page lightweight
+
+---
+
+# PHASE 28 — RESPONSIVE QA
+
+## Goal
+
+Ensure the portfolio works across device sizes.
+
+Test at minimum:
+
+```text
+375px
+390px
+430px
+768px
+1024px
+1280px
+1440px
+```
+
+### Check
+
+- [x] Navbar
+- [x] Hero
+- [x] Terminal
+- [x] Code editor
+- [x] Marquee
+- [x] About
+- [x] Skills
+- [x] Capabilities
+- [x] Projects
+- [x] Project details
+- [x] Experience
+- [x] Contact
+- [x] Footer
+
+### Critical
+
+- [x] No horizontal overflow
+- [x] No clipped text
+- [x] No overlapping buttons
+- [x] No unreadable terminal
+- [x] No oversized headings
+- [x] Touch targets are usable
+
+---
+
+# PHASE 29 — MOBILE OPTIMIZATION
+
+## Goal
+
+Ensure mobile is not simply a scaled desktop version.
+
+### Tasks
+
+- [x] Reduce Hero glow
+- [x] Simplify terminal animation
+- [x] Hide unnecessary decoration
+- [x] Simplify code editor
+- [x] Reduce section spacing appropriately
+- [x] Ensure project screenshots are readable
+- [x] Ensure navigation is comfortable
+- [x] Reduce expensive blur effects
+- [x] Verify scroll performance
+
+Mobile performance takes priority over decoration.
+
+---
+
+# PHASE 30 — ACCESSIBILITY
+
+## Goal
+
+Make the portfolio accessible.
+
+### Tasks
+
+- [x] Verify semantic HTML
+- [x] Verify heading hierarchy
+- [x] Add image alt text
+- [x] Verify button labels
+- [x] Verify link labels
+- [x] Verify keyboard navigation
+- [x] Verify focus states
+- [x] Verify menu accessibility
+- [x] Verify sufficient contrast
+- [x] Add reduced-motion support
+- [x] Ensure decorative elements are ignored by screen readers
+
+---
+
+# PHASE 31 — SEO
+
+## Goal
+
+Configure portfolio metadata.
+
+### Tasks
+
+- [x] Set document title
+- [x] Set meta description
+- [x] Add author
+- [x] Add keywords
+- [x] Add canonical configuration when domain exists
+- [x] Add Open Graph metadata
+- [x] Add social preview metadata
+- [x] Add favicon
+- [x] Add OG image when available
+
+Title:
+
+```text
+Matheus — Web Developer & System Builder
+```
+
+Description must follow `CONTENT.md`.
+
+---
+
+# PHASE 32 — IMAGE OPTIMIZATION
+
+## Goal
+
+Keep portfolio loading fast.
+
+### Tasks
+
+- [x] Review all images
+- [x] Convert large screenshots to WebP where appropriate
+- [x] Consider AVIF when useful
+- [x] Resize oversized screenshots
+- [x] Use responsive dimensions
+- [x] Lazy load non-critical images
+- [x] Prevent layout shift
+- [x] Compress OG image appropriately
+
+Never ship original multi-megabyte screenshots unnecessarily.
+
+---
+
+# PHASE 33 — ANIMATION OPTIMIZATION
+
+## Goal
+
+Keep animations smooth and intentional.
+
+### Allowed
+
+```text
+Terminal typing
+Cursor blink
+Tech marquee
+Scroll reveal
+Status pulse
+Button hover
+Project hover
+Navbar transition
+```
+
+### Tasks
+
+- [x] Remove unnecessary animation
+- [x] Prevent repeated scroll animation
+- [x] Verify animation on low-end mobile
+- [x] Respect reduced motion
+- [x] Avoid layout-triggering animation where possible
+
+Prefer:
+
+```text
+transform
+opacity
+```
+
+over animating layout properties.
+
+---
+
+# PHASE 34 — PERFORMANCE
+
+## Goal
+
+Achieve a fast production experience.
+
+### Tasks
+
+- [x] Remove unused dependencies
+- [x] Remove unused imports
+- [x] Remove unused assets
+- [x] Lazy load project pages if beneficial
+- [x] Optimize images
+- [x] Minimize heavy blur
+- [x] Avoid unnecessary re-renders
+- [x] Check bundle size
+- [x] Verify production build
+
+Target Lighthouse:
+
+```text
+Performance     90+
+Accessibility   90+
+Best Practices  90+
+SEO             90+
+```
+
+Targets are goals, not guarantees across every device.
+
+---
+
+# PHASE 35 — SECURITY & PUBLIC CONTENT REVIEW
+
+## Goal
+
+Ensure no private/internal information is accidentally published.
+
+Review:
+
+- [x] Screenshots
+- [x] Source code
+- [x] Environment variables
+- [x] Project descriptions
+- [x] URLs
+- [x] Network information
+- [x] SAP information
+
+Never expose:
+
+```text
+Passwords
+Tokens
+API keys
+Database credentials
+Private IP addresses
+Internal domains
+Customer data
+Employee data
+Confidential SAP records
+Production database content
+Internal network topology
+```
+
+---
+
+# PHASE 36 — CODE QUALITY
+
+## Goal
+
+Keep the project maintainable.
+
+### Tasks
+
+- [x] Remove duplicate components
+- [x] Remove duplicate styles
+- [x] Keep content in data files
+- [x] Keep components reasonably small
+- [x] Use clear naming
+- [x] Remove console debugging
+- [x] Remove commented dead code
+- [x] Verify imports
+- [x] Verify component keys
+- [x] Fix warnings
+
+Avoid unnecessary abstraction.
+
+Do not create a component for every tiny piece of text.
+
+---
+
+# PHASE 37 — BUILD VALIDATION
+
+Run:
+
+```bash
+npm run build
+```
+
+### Required
+
+- [x] Build completes successfully
+- [x] No fatal errors
+- [x] No unresolved imports
+- [x] No missing assets
+- [x] No invalid routes
+- [x] No production-only crashes
+
+Then test:
+
+```bash
+npm run preview
+```
+
+Verify production behavior.
+
+---
+
+# PHASE 38 — VERCEL PREPARATION
+
+## Goal
+
+Prepare production deployment.
+
+### Tasks
+
+- [x] Verify Vite output
+- [x] Verify routing configuration
+- [x] Verify environment variables if any
+- [x] Verify SPA fallback if required
+- [x] Verify assets
+- [x] Verify project routes
+- [x] Verify social metadata
+- [x] Verify favicon
+- [x] Verify production build
+
+Do not introduce a backend requirement unless necessary.
+
+---
+
+# PHASE 39 — FINAL VISUAL QA
+
+Compare the final website against:
+
+```text
+UI_UX.md
+```
+
+Check:
+
+- [x] Dark developer atmosphere
+- [x] Neon green accent
+- [x] Green usage remains restrained
+- [x] Purple only used as ambient accent
+- [x] Hero is visually strong
+- [x] Terminal looks intentional
+- [x] Code editor supports Hero composition
+- [x] Tech marquee is subtle
+- [x] About is readable
+- [x] Projects dominate the portfolio
+- [x] Cards are not overly rounded
+- [x] No excessive glassmorphism
+- [x] No gaming appearance
+- [x] Mobile maintains the design identity
+
+---
+
+# PHASE 40 — FINAL CONTENT QA
+
+Compare all public content against:
+
+```text
+CONTENT.md
+```
+
+Verify:
+
+- [x] Name is Matheus
+- [x] Role is correct
+- [x] Tagline is correct
+- [x] About copy is correct
+- [x] Skills are correct
+- [x] Project names are correct
+- [x] Project descriptions are correct
+- [x] No fake experience exists
+- [x] No fake metrics exist
+- [x] No fake social URLs exist
+- [x] Missing links are hidden
+- [x] No confidential information exists
+
+---
+
+# PHASE 41 — FINAL UX QA
+
+Test the website as a first-time visitor.
+
+Within approximately 5–10 seconds the visitor should understand:
+
+```text
+Who?
+
+Matheus.
+
+
+What?
+
+Web Developer & System Builder.
+
+
+What does he build?
+
+Web applications and business systems.
+
+
+What makes him different?
+
+He understands technology beyond the frontend.
+
+
+Proof?
+
+Featured real-world projects.
+
+
+How do I contact him?
+
+Contact section.
+```
+
+If this is not immediately clear, improve the content hierarchy.
+
+---
+
+# PHASE 42 — FINAL CLEANUP
+
+Before release:
+
+- [x] Remove temporary assets
+- [x] Remove placeholder content that should not ship
+- [x] Remove TODO UI labels
+- [x] Remove console logs
+- [x] Remove development comments
+- [x] Remove unused files
+- [x] Verify favicon
+- [x] Verify page title
+- [x] Verify project screenshots
+- [x] Verify mobile
+- [x] Verify desktop
+- [x] Run final production build
+
+---
+
+# PHASE 43 — RELEASE
+
+Final commands:
+
+```bash
+npm run build
+```
+
+Then:
+
+```bash
+npm run preview
+```
+
+Verify the final production version.
+
+When everything passes:
+
+```text
+STATUS: READY FOR DEPLOYMENT
+
+- [x] Build complete (zero errors)
+- [x] Preview verified
+- [ ] Deploy to Vercel (user action required)
+```
+
+Deploy to Vercel.
+
+---
+
+# 44. Post-V1 Backlog
+
+Do NOT implement these unless explicitly requested.
+
+```text
+[ ] Blog
+[ ] Technical articles
+[ ] GitHub activity integration
+[ ] Resume download
+[ ] Certification section
+[ ] Project filtering
+[ ] Project search
+[ ] Interactive architecture diagrams
+[ ] Indonesian language
+[ ] Theme switcher
+[ ] Analytics
+[ ] CMS
+[ ] Additional case studies
+```
+
+These belong to future iterations.
+
+---
+
+# 45. OpenCode Execution Instructions
+
+When OpenCode is asked to start development:
+
+```text
+Read:
+
+docs/PRD.md
+docs/UI_UX.md
+docs/CONTENT.md
+docs/TASK.md
+
+before writing code.
+
+Use the documentation as the source of truth.
+
+Do not attempt to implement all phases at once.
+
+Start from the earliest incomplete phase.
+
+Complete tasks sequentially.
+
+After completing a phase:
+
+1. Review the implementation.
+2. Test for errors.
+3. Test desktop and mobile behavior.
+4. Run npm run build when appropriate.
+5. Fix issues before continuing.
+6. Update TASK.md by marking completed tasks with [x].
+7. Report what was changed.
+8. State which phase should be implemented next.
+
+Do not invent portfolio content.
+
+Do not alter the visual direction without checking UI_UX.md.
+
+Do not add dependencies unless they provide clear value.
+
+Do not sacrifice mobile performance for decorative effects.
+```
+
+---
+
+# 46. Initial Development Milestone
+
+The first major milestone should produce:
+
+```text
+Navbar
++
+Hero
++
+Developer Terminal
++
+Floating Code Editor
++
+Technology Marquee
+```
+
+This milestone establishes the visual identity.
+
+Do NOT rush into Projects before the Hero design direction is correct.
+
+After Milestone 1, visually review the website.
+
+If the Hero does not match the intended design direction:
+
+```text
+STOP
+```
+
+Improve the Hero before implementing the remaining sections.
+
+---
+
+# 47. Second Development Milestone
+
+After Hero approval:
+
+```text
+About
++
+Developer Profile
++
+Skills
++
+What I Build
+```
+
+Review:
+
+```text
+Visual consistency
+Spacing
+Typography
+Mobile behavior
+```
+
+before continuing.
+
+---
+
+# 48. Third Development Milestone
+
+Then implement:
+
+```text
+Featured Projects
++
+Project Detail
++
+Experience
+```
+
+Projects should receive the most attention during this milestone.
+
+Real screenshots should be used when available.
+
+---
+
+# 49. Fourth Development Milestone
+
+Finish:
+
+```text
+Developer Philosophy
++
+Contact
++
+Footer
++
+404
+```
+
+Then begin optimization and QA.
+
+---
+
+# 50. Final Milestone
+
+Complete:
+
+```text
+Responsive QA
+Accessibility
+SEO
+Performance
+Image Optimization
+Security Review
+Build Validation
+Vercel Preparation
+```
+
+Only after these pass should the project be considered production-ready.
+
+---
+
+# 51. Final Development Principle
+
+Throughout development remember:
+
+> The goal is not to create the most animated portfolio.
+
+The goal is to create a portfolio that clearly communicates:
+
+```text
+MATHEUS
+
+WEB DEVELOPER
+&
+SYSTEM BUILDER
+
+FROM INTERFACE
+TO INFRASTRUCTURE.
+```
+
+The strongest elements should be:
+
+```text
+Identity
+Real Projects
+Technical Capability
+System Thinking
+Clean Design
+Performance
+```
+
+Decoration should support these elements, never compete with them.

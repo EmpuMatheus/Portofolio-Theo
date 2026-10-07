@@ -1,0 +1,104 @@
+# Product Requirements Document
+# Personal Portfolio — Web Developer & System Builder
+
+**Document:** PRD.md  
+**Project Type:** Personal Portfolio Website  
+**Status:** Planning  
+**Version:** 1.0
+
+---
+
+## 1. Project Overview
+
+This project is a personal portfolio website designed primarily for **personal branding** as a:
+
+> **Web Developer & System Builder**
+
+The portfolio should present the developer not only as someone who builds website interfaces, but as someone capable of understanding and building complete digital systems across:
+
+- Frontend
+- Backend
+- Database
+- Business Systems
+- Enterprise Integration
+- Server Infrastructure
+- Networking
+- Automation
+
+The portfolio must feel technical, modern, professional, and developer-oriented.
+
+The main brand message is:
+
+> **From Interface to Infrastructure.**
+
+---
+
+## 2. Project Goals
+
+The primary goal of this portfolio is to establish a strong and memorable personal brand.
+
+The website should allow visitors to quickly understand:
+
+1. Who the developer is.
+2. What the developer specializes in.
+3. What technologies the developer works with.
+4. What real-world systems and applications have been built.
+5. The developer's ability to work beyond frontend development.
+6. How to contact the developer.
+
+The portfolio should communicate three primary characteristics:
+
+> **Developer. Problem Solver. System Builder.**
+
+---
+
+## 3. Target Audience
+
+The website is intended for:
+
+### Primary Audience
+
+- Other developers
+- Technology professionals
+- Potential collaborators
+- Professional connections
+- People discovering the developer through social media or GitHub
+
+### Secondary Audience
+
+- Recruiters
+- Companies
+- Potential clients
+- Freelance opportunities
+- Business owners looking for digital solutions
+
+The website should remain understandable even to visitors without deep technical knowledge.
+
+---
+
+## 4. Personal Brand Positioning
+
+The developer should be positioned as:
+
+> A Web Developer who builds practical digital systems and understands the technology behind them from interface to infrastructure.
+
+The portfolio should avoid presenting the developer only as:
+
+- Frontend Developer
+- UI Developer
+- Website Designer
+
+Instead, the portfolio should demonstrate broader technical capabilities.
+
+Core positioning:
+
+```text
+Web Developer
+      ↓
+Full Stack Development
+      ↓
+Database & Business Systems
+      ↓
+Infrastructure
+      ↓
+Networking

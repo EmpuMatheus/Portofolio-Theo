@@ -71,6 +71,76 @@
   50% { opacity: 0; }
 }
 
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbit-spin-reverse {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.profile-photo-orbit {
+  --orbit-color: rgba(34, 197, 94, 0.25);
+  --particle-color: #4ADE80;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.profile-photo-orbit .orbit-track {
+  position: absolute;
+  border-radius: 9999px;
+  border: 1px solid var(--orbit-color);
+}
+
+.profile-photo-orbit .orbit-track-outer {
+  inset: -22px;
+}
+
+.profile-photo-orbit .orbit-track-inner {
+  inset: -14px;
+  border-color: rgba(34, 197, 94, 0.14);
+}
+
+.profile-photo-orbit .orbit-arm {
+  position: absolute;
+  inset: -22px;
+  animation: orbit-spin 8s linear infinite;
+}
+
+.profile-photo-orbit .orbit-arm-reverse {
+  position: absolute;
+  inset: -14px;
+  animation: orbit-spin-reverse 12s linear infinite;
+}
+
+.profile-photo-orbit .orbit-particle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  background: var(--particle-color);
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.8), 0 0 16px rgba(34, 197, 94, 0.35);
+}
+
+.profile-photo-orbit .orbit-particle-dim {
+  width: 4px;
+  height: 4px;
+  background: rgba(74, 222, 128, 0.8);
+  box-shadow: 0 0 6px rgba(74, 222, 128, 0.5);
+}
+
+@media (max-width: 640px) {
+  .profile-photo-orbit .orbit-particle {
+    box-shadow: 0 0 5px rgba(74, 222, 128, 0.6), 0 0 10px rgba(34, 197, 94, 0.25);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -115,8 +115,10 @@ export const skills = [
 
 export const techMarquee = [
   { name: "JavaScript", color: "#F7DF1E" },
+  { name: "TypeScript", color: "#3178C6" },
   { name: "React", color: "#61DAFB" },
   { name: "Node.js", color: "#339933" },
+  { name: "Python", color: "#3776AB" },
   { name: "PostgreSQL", color: "#4169E1" },
   { name: "SAP HANA", color: "#0FAAFF" },
   { name: "HTML5", color: "#E34F26" },

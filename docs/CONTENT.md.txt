@@ -1,0 +1,1981 @@
+# Portfolio Content
+# Matheus — Web Developer & System Builder
+
+**Document:** CONTENT.md  
+**Project:** Personal Portfolio  
+**Owner:** Matheus  
+**Version:** 1.0  
+**Status:** Draft / Content Source of Truth
+
+---
+
+# 1. Purpose
+
+This document contains the actual content displayed throughout the portfolio.
+
+This file is the source of truth for:
+
+- Personal identity
+- Hero content
+- About content
+- Skills
+- Capabilities
+- Projects
+- Experience
+- Social links
+- Contact information
+- SEO content
+- Technical microcopy
+
+UI components should NOT invent or modify portfolio facts.
+
+If information is unavailable, use a clearly marked placeholder or hide the related element.
+
+Never generate fake:
+
+- Experience
+- Clients
+- Companies
+- Statistics
+- Testimonials
+- Certifications
+- GitHub repositories
+- Project URLs
+- Social links
+- Skill percentages
+
+---
+
+# 2. Personal Identity
+
+## Name
+
+```text
+Matheus
+```
+
+## Display Name
+
+```text
+MATHEUS
+```
+
+## Brand / Logo
+
+Preferred:
+
+```text
+<Matheus />
+```
+
+Alternative:
+
+```text
+Matheus.dev
+```
+
+## Professional Title
+
+```text
+Web Developer & System Builder
+```
+
+## Primary Tagline
+
+```text
+From Interface to Infrastructure.
+```
+
+## Brand Keywords
+
+```text
+Developer
+Problem Solver
+System Builder
+```
+
+---
+
+# 3. Hero Content
+
+## Greeting
+
+```text
+Hello World! I'm
+```
+
+Optional terminal-style version:
+
+```text
+> Hello World! I'm
+```
+
+## Name
+
+```text
+MATHEUS
+```
+
+## Role
+
+```text
+Web Developer & System Builder
+```
+
+## Hero Description
+
+```text
+I build modern web applications, business systems, and digital solutions that turn real operational problems into reliable software.
+```
+
+## Primary CTA
+
+```text
+View Projects
+```
+
+Target:
+
+```text
+#projects
+```
+
+## Secondary CTA
+
+```text
+Contact Me
+```
+
+Target:
+
+```text
+#contact
+```
+
+---
+
+# 4. Hero Developer Workspace
+
+The terminal content should represent Matheus' actual technical identity.
+
+## Terminal Header
+
+```text
+matheus@workspace
+```
+
+## Terminal Sequence
+
+```bash
+$ whoami
+
+Matheus
+Web Developer & System Builder
+
+$ focus
+
+Web Applications
+Business Systems
+Infrastructure
+
+$ stack --current
+
+React
+Node.js
+PostgreSQL
+SAP HANA
+Linux
+Docker
+
+$ status
+
+● ONLINE
+Building useful things...
+```
+
+---
+
+# 5. Floating Code Editor
+
+Use the following content inside the Hero code editor.
+
+```javascript
+const matheus = {
+  role: "Web Developer",
+
+  focus: [
+    "Web Applications",
+    "Business Systems",
+    "Infrastructure"
+  ],
+
+  mindset: "solve real problems",
+
+  status: "building"
+};
+```
+
+This code is decorative but should still accurately represent the personal brand.
+
+---
+
+# 6. Navigation
+
+Navigation items:
+
+```text
+About
+Skills
+Projects
+Experience
+Contact
+```
+
+Targets:
+
+```text
+About       → #about
+Skills      → #skills
+Projects    → #projects
+Experience  → #experience
+Contact     → #contact
+```
+
+Logo should return to:
+
+```text
+#home
+```
+
+---
+
+# 7. Technology Marquee
+
+Display the following technologies.
+
+Recommended order:
+
+```text
+JavaScript
+React
+Node.js
+PostgreSQL
+SAP HANA
+HTML5
+CSS3
+Tailwind CSS
+Vite
+Git
+Docker
+Linux
+Nginx
+MikroTik
+Ubiquiti
+```
+
+Do not display proficiency percentages.
+
+Technology names may include official icons where appropriate.
+
+---
+
+# 8. About Section
+
+## Section Label
+
+```text
+01 / ABOUT
+```
+
+## Heading
+
+```text
+About Me.
+```
+
+## Primary About Copy
+
+```text
+I'm a Web Developer focused on building practical web applications and internal business systems.
+
+I enjoy working across the entire system — from user interfaces and backend services to databases, infrastructure, and networking.
+
+For me, development isn't only about writing code or creating interfaces. It's about understanding a problem, designing the right workflow, connecting the necessary technologies, and building a solution that actually works in real-world operations.
+```
+
+## Secondary About Copy
+
+```text
+My technical interests include web development, business systems, database integration, server infrastructure, networking, and automation.
+
+I especially enjoy projects where software connects directly with operational processes such as inventory management, warehouse operations, reporting, and enterprise data.
+```
+
+---
+
+# 9. Developer Profile
+
+## Panel Label
+
+```text
+DEVELOPER.PROFILE
+```
+
+## Profile Data
+
+```text
+NAME
+Matheus
+
+ROLE
+Web Developer & System Builder
+
+FOCUS
+Web Applications / Business Systems
+
+FRONTEND
+React / Vite / Tailwind CSS
+
+BACKEND
+Node.js / Express
+
+DATABASE
+PostgreSQL / SAP HANA / SQLite
+
+INFRASTRUCTURE
+Linux / Docker / Nginx
+
+NETWORK
+MikroTik / Ubiquiti / UniFi
+
+STATUS
+● ONLINE
+```
+
+---
+
+# 10. Skills Section
+
+## Section Label
+
+```text
+02 / SKILLS
+```
+
+## Heading
+
+```text
+Tech Stack.
+```
+
+## Description
+
+```text
+Technologies and tools I use to build, integrate, deploy, and maintain digital systems.
+```
+
+---
+
+# 11. Frontend Skills
+
+Category:
+
+```text
+FRONTEND
+```
+
+Skills:
+
+```text
+React
+JavaScript
+Vite
+Tailwind CSS
+HTML5
+CSS3
+Responsive Web Design
+```
+
+Description:
+
+```text
+Building responsive and maintainable user interfaces for modern web applications.
+```
+
+---
+
+# 12. Backend Skills
+
+Category:
+
+```text
+BACKEND
+```
+
+Skills:
+
+```text
+Node.js
+Express.js
+REST API
+API Integration
+Authentication
+Server-side Application Logic
+```
+
+Description:
+
+```text
+Building backend services, APIs, application logic, and integrations that connect frontend applications with data and business processes.
+```
+
+---
+
+# 13. Database Skills
+
+Category:
+
+```text
+DATABASE
+```
+
+Skills:
+
+```text
+PostgreSQL
+SAP HANA
+SQLite
+SQL
+Database Design
+SQL Query Development
+Stored Procedures
+```
+
+Description:
+
+```text
+Working with relational databases, business data, queries, stored procedures, and application data structures.
+```
+
+---
+
+# 14. Enterprise & Business Systems
+
+Category:
+
+```text
+ENTERPRISE
+```
+
+Skills:
+
+```text
+SAP Business One
+SAP HANA
+Inventory Systems
+Warehouse Systems
+Stock Opname Systems
+Business Data Integration
+Operational Reporting
+```
+
+Description:
+
+```text
+Building and integrating applications around real business operations and enterprise data.
+```
+
+---
+
+# 15. Infrastructure Skills
+
+Category:
+
+```text
+INFRASTRUCTURE
+```
+
+Skills:
+
+```text
+Linux
+Docker
+Nginx
+VPS
+Application Deployment
+Reverse Proxy
+Server Management
+```
+
+Description:
+
+```text
+Deploying and managing web applications and supporting services across Linux-based environments.
+```
+
+---
+
+# 16. Networking Skills
+
+Category:
+
+```text
+NETWORKING
+```
+
+Skills:
+
+```text
+MikroTik
+Ubiquiti
+UniFi
+VLAN
+DHCP
+NAT
+Routing
+Network Infrastructure
+Internal DNS
+```
+
+Description:
+
+```text
+Understanding and configuring network infrastructure that supports applications, devices, and internal systems.
+```
+
+---
+
+# 17. Development Tools
+
+Category:
+
+```text
+TOOLS
+```
+
+Skills:
+
+```text
+Git
+GitHub
+VS Code
+OpenCode
+Postman
+pgAdmin
+```
+
+Additional tools may be added only when confirmed.
+
+---
+
+# 18. What I Build
+
+## Section Heading
+
+```text
+What I Build.
+```
+
+## Introduction
+
+```text
+I enjoy building systems where software solves practical operational problems.
+```
+
+---
+
+## Capability 01
+
+### Title
+
+```text
+Web Applications
+```
+
+### Description
+
+```text
+Modern, responsive web applications designed around real user workflows and business requirements.
+```
+
+---
+
+## Capability 02
+
+### Title
+
+```text
+Business Systems
+```
+
+### Description
+
+```text
+Internal applications for inventory, warehouse operations, stock opname, reporting, and other operational workflows.
+```
+
+---
+
+## Capability 03
+
+### Title
+
+```text
+Backend & API
+```
+
+### Description
+
+```text
+REST APIs, backend services, authentication flows, application logic, and integrations between systems.
+```
+
+---
+
+## Capability 04
+
+### Title
+
+```text
+Database Integration
+```
+
+### Description
+
+```text
+Connecting applications with PostgreSQL, SQL, SQLite, SAP HANA, and enterprise business data.
+```
+
+---
+
+## Capability 05
+
+### Title
+
+```text
+Infrastructure
+```
+
+### Description
+
+```text
+Deploying and supporting applications using Linux, Docker, Nginx, VPS environments, and modern hosting platforms.
+```
+
+---
+
+## Capability 06
+
+### Title
+
+```text
+Networking
+```
+
+### Description
+
+```text
+Working with MikroTik, Ubiquiti, UniFi, VLANs, routing, and network infrastructure supporting internal systems.
+```
+
+---
+
+# 19. Projects Section
+
+## Section Label
+
+```text
+03 / PROJECTS
+```
+
+## Heading
+
+```text
+Featured Projects.
+```
+
+## Description
+
+```text
+Systems and applications I've built to solve real operational problems.
+```
+
+Featured projects:
+
+```text
+01 — WHS Digital
+02 — Evolve.ina
+03 — Enterprise Data Integration
+```
+
+---
+
+# 20. Project 01 — WHS Digital
+
+## ID
+
+```text
+whs-digital
+```
+
+## Name
+
+```text
+WHS Digital
+```
+
+## Full Title
+
+```text
+WHS Digital — Stock Opname & Warehouse System
+```
+
+## Category
+
+```text
+Warehouse Management System
+```
+
+## Short Description
+
+```text
+A digital stock opname and warehouse system designed to improve inventory counting, verification, and warehouse operations.
+```
+
+## Overview
+
+```text
+WHS Digital digitalizes stock opname workflows that would otherwise rely heavily on manual processes.
+
+The system manages warehouse data, inventory tags, stock counting, recount workflows, user verification, progress monitoring, and reporting through a centralized web application.
+```
+
+## Problem
+
+```text
+Stock opname involves large amounts of inventory data, physical counting, verification, tag management, and progress tracking.
+
+Manual workflows can make it difficult to monitor counting progress, identify recount requirements, track responsibility, and consolidate results efficiently.
+```
+
+## Solution
+
+```text
+WHS Digital provides a centralized digital workflow where inventory tags can be generated, scanned, counted, verified, monitored, and reported through a web-based system.
+
+QR and barcode-based workflows connect physical inventory activities with digital records.
+```
+
+## Key Features
+
+```text
+QR / Barcode Tag System
+Warehouse Management
+Inventory Tag Management
+Stock Counting
+First Count Workflow
+Recount Workflow
+User Verification
+Counter Assignment
+Progress Monitoring
+Stock Opname Dashboard
+Recent Activity
+Tag Search & Filtering
+Excel Report Export
+Enterprise Data Integration
+Responsive Interface
+```
+
+## Technology
+
+```text
+React
+Node.js
+Express.js
+PostgreSQL
+REST API
+QR / Barcode Integration
+```
+
+## Project Type
+
+```text
+Internal Business Application
+```
+
+## Screenshot
+
+```text
+TODO: Add WHS Digital screenshots
+```
+
+Recommended folder:
+
+```text
+/public/projects/whs-digital/
+```
+
+## GitHub
+
+```text
+PRIVATE / NOT PUBLIC
+```
+
+If no public repository exists:
+
+```text
+github: null
+```
+
+The GitHub button MUST NOT be displayed.
+
+## Live Demo
+
+```text
+TODO
+```
+
+If unavailable:
+
+```text
+demo: null
+```
+
+---
+
+# 21. Project 02 — Evolve.ina
+
+## ID
+
+```text
+evolve-ina
+```
+
+## Name
+
+```text
+Evolve.ina
+```
+
+## Full Title
+
+```text
+Evolve.ina — Inventory & POS System
+```
+
+## Category
+
+```text
+Inventory Management / POS
+```
+
+## Short Description
+
+```text
+A modern inventory and cashier management application designed to simplify product, vendor, inventory, and transaction management.
+```
+
+## Overview
+
+```text
+Evolve.ina is an inventory and cashier management application focused on providing a clean and modern interface for managing operational data.
+```
+
+## Key Features
+
+```text
+Authentication
+Dashboard
+Inventory Management
+Product Management
+Vendor Management
+Automatic SKU Generation
+Transaction Management
+Responsive Interface
+Light / Dark Interface Support
+```
+
+## Technology
+
+```text
+React
+Vite
+Tailwind CSS
+PostgreSQL
+Supabase
+```
+
+## Project Type
+
+```text
+Web Application
+```
+
+## Screenshot
+
+```text
+TODO: Add Evolve.ina screenshots
+```
+
+Recommended folder:
+
+```text
+/public/projects/evolve-ina/
+```
+
+## GitHub
+
+```text
+TODO
+```
+
+## Live Demo
+
+```text
+TODO
+```
+
+Hide unavailable links.
+
+---
+
+# 22. Project 03 — Enterprise Data Integration
+
+## ID
+
+```text
+enterprise-data-integration
+```
+
+## Name
+
+```text
+Enterprise Data Integration
+```
+
+## Category
+
+```text
+Enterprise Systems / Data Integration
+```
+
+## Short Description
+
+```text
+Integration and synchronization between enterprise business systems and modern application databases.
+```
+
+## Overview
+
+```text
+This work focuses on connecting enterprise data from SAP Business One and SAP HANA with modern databases and applications.
+
+The goal is to make business data available for reporting, synchronization, internal applications, and operational workflows.
+```
+
+## Focus Areas
+
+```text
+SAP Business One
+SAP HANA
+SQL
+PostgreSQL
+Node.js
+Data Synchronization
+Stored Procedures
+Reporting
+Business Data Processing
+Application Integration
+```
+
+## Technology
+
+```text
+SAP Business One
+SAP HANA
+SQL
+PostgreSQL
+Node.js
+```
+
+## Project Type
+
+```text
+Enterprise Integration
+```
+
+## Screenshots
+
+Do NOT display confidential business information.
+
+Use:
+
+```text
+Architecture diagrams
+Sanitized screenshots
+Mock data
+Technical diagrams
+```
+
+when real production data cannot be publicly displayed.
+
+## GitHub
+
+```text
+null
+```
+
+## Live Demo
+
+```text
+null
+```
+
+---
+
+# 23. Project Confidentiality Rules
+
+Some portfolio projects may originate from internal or business environments.
+
+Never publicly expose:
+
+```text
+Passwords
+API keys
+Database credentials
+Internal IP addresses
+Private domains
+Customer information
+Employee information
+Production database records
+Confidential SAP data
+Company secrets
+Internal network topology
+```
+
+When necessary:
+
+```text
+Blur
+Redact
+Replace
+Sanitize
+Use mock data
+```
+
+before displaying screenshots.
+
+---
+
+# 24. Project Case Study Structure
+
+Each detailed project page should follow:
+
+```text
+Project Introduction
+
+↓
+
+Overview
+
+↓
+
+The Problem
+
+↓
+
+The Solution
+
+↓
+
+Key Features
+
+↓
+
+System / Architecture
+
+↓
+
+Technology
+
+↓
+
+Screenshots
+
+↓
+
+Challenges
+
+↓
+
+Results / Learnings
+```
+
+Do not invent measurable results.
+
+For example, DO NOT claim:
+
+```text
+"Increased productivity by 70%"
+```
+
+unless there is actual supporting data.
+
+Use qualitative results instead when exact metrics are unavailable.
+
+Example:
+
+```text
+The system centralizes stock counting workflows and provides clearer visibility into stock opname progress.
+```
+
+---
+
+# 25. Experience Section
+
+## Section Label
+
+```text
+04 / EXPERIENCE
+```
+
+## Heading
+
+```text
+Professional Experience.
+```
+
+## Description
+
+```text
+A journey through software development, IT infrastructure, enterprise systems, and digital design.
+```
+
+---
+
+# 26. Professional Experience — PT Bahana Bhumiphala Persada
+
+## ID
+
+```text
+bahana-bhumiphala-persada
+```
+
+## Company
+
+```text
+PT Bahana Bhumiphala Persada
+```
+
+## Role
+
+```text
+IT Support
+```
+
+## Period
+
+```text
+2024 — Present
+```
+
+## Current
+
+```text
+true
+```
+
+## Responsibilities
+
+```text
+- Manage and support network infrastructure.
+- Support SAP Business One environments and operational users.
+- Work with SAP HANA SQL for data queries and business reporting.
+- Maintain servers and supporting IT infrastructure.
+- Troubleshoot and maintain computer hardware and peripherals.
+- Support day-to-day IT operations and technical issues.
+```
+
+## Technologies
+
+```text
+SAP Business One
+SAP HANA
+SQL
+Networking
+Server
+Hardware
+IT Infrastructure
+```
+
+---
+
+# 27. Professional Experience — Freelance
+
+## ID
+
+```text
+freelance-full-stack
+```
+
+## Company
+
+```text
+Freelance
+```
+
+## Role
+
+```text
+Software Engineer / Full Stack Developer
+```
+
+## Period
+
+```text
+2023 — Present
+```
+
+## Current
+
+```text
+true
+```
+
+## Responsibilities
+
+```text
+- Develop warehouse management and internal business applications using React and Node.js.
+- Design and manage PostgreSQL and SQLite databases.
+- Build REST APIs using Node.js and Express.js.
+- Integrate applications with SAP Business One HANA.
+- Implement QR Code and barcode scanning workflows.
+- Build stock opname and warehouse monitoring dashboards.
+- Generate operational reports in Excel and PDF formats.
+- Deploy and maintain web applications on Vercel.
+```
+
+## Technologies
+
+```text
+React
+Node.js
+Express.js
+PostgreSQL
+SQLite
+SAP Business One
+SAP HANA
+REST API
+QR / Barcode
+Vercel
+```
+
+---
+
+# 28. Professional Experience — MMC Jersey
+
+## ID
+
+```text
+mmc-jersey
+```
+
+## Company
+
+```text
+MMC Jersey
+```
+
+## Role
+
+```text
+Graphic Designer
+```
+
+## Period
+
+```text
+2021 — Present
+```
+
+## Current
+
+```text
+true
+```
+
+## Responsibilities
+
+```text
+- Design custom jersey concepts based on customer requirements.
+- Communicate directly with customers during the design process.
+- Prepare production-ready design files.
+- Research visual and apparel design trends.
+- Revise designs based on customer feedback and production requirements.
+```
+
+## Technologies
+
+```text
+Graphic Design
+Jersey Design
+Customer Communication
+Production Design
+```
+
+---
+
+# 29. Professional Experience — Jatiez Development
+
+## ID
+
+```text
+jatiez-development
+```
+
+## Company
+
+```text
+Jatiez Development
+```
+
+## Role
+
+```text
+Android Developer
+```
+
+## Period
+
+```text
+2017 — 2019
+```
+
+## Current
+
+```text
+false
+```
+
+## Responsibilities
+
+```text
+- Develop and maintain Android applications.
+- Design application user interfaces.
+- Debug application issues and maintain existing functionality.
+- Collaborate on application feature development.
+```
+
+## Technologies
+
+```text
+Android Development
+Mobile Application Development
+UI Design
+Debugging
+```
+
+---
+
+# 30. Developer Philosophy
+
+## Section Label
+
+```text
+SYSTEM.PHILOSOPHY
+```
+
+## Main Statement
+
+```text
+I don't just build interfaces.
+
+I build systems that solve problems.
+```
+
+## Supporting Text
+
+```text
+My focus is turning operational challenges into reliable digital solutions through web development, databases, automation, infrastructure, and thoughtful system design.
+```
+
+## Brand Closing
+
+```text
+From Interface to Infrastructure.
+```
+
+---
+
+# 31. Contact Section
+
+## Section Label
+
+```text
+05 / CONTACT
+```
+
+## Heading
+
+```text
+Let's Build Something.
+```
+
+## Description
+
+```text
+Have a project, collaboration, or opportunity in mind?
+
+Let's talk.
+```
+
+---
+
+# 32. Contact Information
+
+## Email
+
+```text
+lestiyanto97@gmail.com
+```
+
+## Email mailto
+
+```text
+mailto:lestiyanto97@gmail.com
+```
+
+## GitHub
+
+```text
+TODO: Add GitHub profile URL
+```
+
+## LinkedIn
+
+```text
+TODO: Add LinkedIn profile URL
+```
+
+Never generate placeholder links such as:
+
+```text
+github.com/matheus
+linkedin.com/in/matheus
+```
+
+unless they are confirmed to be correct.
+
+If a social URL is unavailable, hide that social button.
+
+---
+
+# 33. Contact Terminal
+
+Optional decorative content:
+
+```bash
+$ contact matheus
+
+> Ready for collaboration.
+> Select a channel:
+
+[ Email ]
+[ GitHub ]
+[ LinkedIn ]
+```
+
+Only display channels with valid configured URLs.
+
+---
+
+# 34. Footer
+
+## Brand
+
+```text
+<Matheus />
+```
+
+## Tagline
+
+```text
+From Interface to Infrastructure.
+```
+
+## Footer Text
+
+```text
+Designed & Built with Code.
+```
+
+Copyright:
+
+```text
+© {CURRENT_YEAR} Matheus
+```
+
+The year must be generated dynamically.
+
+---
+
+# 35. SEO Content
+
+## Page Title
+
+```text
+Matheus — Web Developer & System Builder
+```
+
+## Meta Description
+
+```text
+Portfolio of Matheus, a Web Developer & System Builder focused on web applications, business systems, database integration, infrastructure, and practical digital solutions.
+```
+
+## Keywords
+
+```text
+Matheus
+Web Developer
+System Builder
+Full Stack Developer
+React Developer
+Node.js Developer
+PostgreSQL
+SAP HANA
+SAP Business One
+Web Applications
+Business Systems
+Warehouse Systems
+Inventory Systems
+Linux
+Docker
+MikroTik
+Ubiquiti
+```
+
+---
+
+# 36. Open Graph
+
+## Title
+
+```text
+Matheus — Web Developer & System Builder
+```
+
+## Description
+
+```text
+Building web applications and business systems from interface to infrastructure.
+```
+
+## Image
+
+```text
+TODO: /public/og-image.png
+```
+
+Recommended image size:
+
+```text
+1200 × 630
+```
+
+---
+
+# 37. Browser Title
+
+Default:
+
+```text
+Matheus — Web Developer & System Builder
+```
+
+Optional dynamic project title:
+
+```text
+WHS Digital | Matheus
+```
+
+```text
+Evolve.ina | Matheus
+```
+
+---
+
+# 38. 404 Content
+
+## Heading
+
+```text
+404
+```
+
+## Terminal Message
+
+```bash
+$ locate page
+
+Error: resource not found.
+```
+
+## Description
+
+```text
+Looks like this route doesn't exist.
+```
+
+## CTA
+
+```text
+Return Home
+```
+
+---
+
+# 39. Small UI Microcopy
+
+Allowed technical labels:
+
+```text
+DEVELOPER.PROFILE
+
+SYSTEM.STATUS
+
+CURRENT.FOCUS
+
+STACK.INDEX
+
+PROJECT.01
+
+PROJECT.02
+
+PROJECT.03
+
+BUILD.STATUS
+
+AVAILABLE.ONLINE
+
+SYSTEM.PHILOSOPHY
+```
+
+Use them sparingly.
+
+---
+
+# 40. Status Language
+
+Preferred:
+
+```text
+● ONLINE
+```
+
+Alternative:
+
+```text
+STATUS: BUILDING
+```
+
+Do NOT use misleading availability text such as:
+
+```text
+AVAILABLE FOR HIRE
+```
+
+unless explicitly enabled later.
+
+---
+
+# 41. Tone of Voice
+
+Portfolio writing should feel:
+
+```text
+Confident
+Technical
+Simple
+Professional
+Human
+Practical
+```
+
+Avoid:
+
+```text
+Corporate buzzwords
+Exaggerated claims
+Overly formal language
+AI-sounding marketing copy
+Fake statistics
+```
+
+Prefer:
+
+```text
+"I build systems that solve problems."
+```
+
+instead of:
+
+```text
+"I leverage cutting-edge technological paradigms to deliver transformative digital experiences."
+```
+
+---
+
+# 42. Language
+
+Primary portfolio language:
+
+```text
+English
+```
+
+The initial V1 does NOT require multilingual support.
+
+Indonesian may be added later.
+
+---
+
+# 43. Content Data Structure
+
+OpenCode should convert content into structured data where appropriate.
+
+Recommended:
+
+```text
+src/data/
+├── profile.js
+├── navigation.js
+├── skills.js
+├── capabilities.js
+├── projects.js
+├── experience.js
+└── socialLinks.js
+```
+
+---
+
+# 44. Profile Data Example
+
+```javascript
+export const profile = {
+  name: "Matheus",
+  displayName: "MATHEUS",
+
+  role: "Web Developer & System Builder",
+
+  tagline: "From Interface to Infrastructure.",
+
+  description:
+    "I build modern web applications, business systems, and digital solutions that turn real operational problems into reliable software."
+};
+```
+
+---
+
+# 45. Social Data
+
+Use:
+
+```javascript
+export const socialLinks = {
+  github: null,
+  linkedin: null,
+  email: null
+};
+```
+
+Replace `null` only when confirmed URLs/information are available.
+
+Components must automatically hide missing links.
+
+---
+
+# 46. Project Data Requirements
+
+Every project object should support:
+
+```javascript
+{
+  id,
+  number,
+  title,
+  fullTitle,
+  category,
+  shortDescription,
+  overview,
+  problem,
+  solution,
+  features,
+  technologies,
+  images,
+  github,
+  demo,
+  featured
+}
+```
+
+This structure should drive both:
+
+```text
+Featured Project Cards
+```
+
+and:
+
+```text
+Project Case Study Pages
+```
+
+---
+
+# 47. Content Priority
+
+If the page becomes too long, prioritize content in this order:
+
+```text
+1. Hero
+2. Featured Projects
+3. About
+4. Skills
+5. Experience
+6. Developer Philosophy
+7. Contact
+```
+
+Do NOT remove project content to make room for decorative sections.
+
+---
+
+# 48. Public Information Safety
+
+Before publishing the portfolio, review all screenshots and content.
+
+Check for:
+
+```text
+Company confidential information
+Private names
+Internal URLs
+IP addresses
+Database credentials
+SAP information
+Network information
+API keys
+Tokens
+Personal information
+```
+
+Sensitive data must be removed before deployment.
+
+---
+
+# 49. TODO Before Production
+
+The following information still needs to be completed:
+
+```text
+[x] Public email address
+
+[ ] GitHub profile URL
+
+[ ] LinkedIn profile URL
+
+[ ] WHS Digital screenshots
+
+[ ] Evolve.ina screenshots
+
+[ ] WHS Digital demo availability
+
+[ ] Evolve.ina demo availability
+
+[ ] GitHub repository availability
+
+[x] Professional experience timeline
+
+[ ] Profile photo decision
+
+[ ] Resume / CV download decision
+
+[ ] Open Graph image
+```
+
+Missing information must NOT block initial UI development.
+
+Use `null` values and automatically hide unavailable components.
+
+---
+
+# 50. Final Content Message
+
+Every major section should reinforce the same story:
+
+```text
+Who am I?
+
+Matheus.
+
+
+What do I do?
+
+Web Developer & System Builder.
+
+
+What do I build?
+
+Web applications and business systems.
+
+
+What can I work with?
+
+Frontend.
+Backend.
+Database.
+Enterprise Systems.
+Infrastructure.
+Networking.
+
+
+What makes the personal brand different?
+
+I understand systems beyond the interface.
+
+
+Core message:
+
+FROM INTERFACE
+TO INFRASTRUCTURE.
+```
+
+---
+
+# 51. Content Source of Truth Rule
+
+OpenCode must follow these rules:
+
+1. Use this document as the source of truth for portfolio content.
+2. Do not invent missing personal information.
+3. Do not invent experience.
+4. Do not invent statistics.
+5. Do not invent project links.
+6. Do not invent social links.
+7. Do not expose confidential project information.
+8. Use `null` for unavailable links/data.
+9. Hide UI elements whose required content is unavailable.
+10. Keep content separated from presentation components.
+
+If `CONTENT.md` conflicts with placeholder content inside UI components:
+
+> `CONTENT.md` wins.
+
+If `UI_UX.md` defines visual presentation:
+
+> `UI_UX.md` wins for presentation.
+
+If `PRD.md` defines product behavior or scope:
+
+> `PRD.md` wins for product requirements.

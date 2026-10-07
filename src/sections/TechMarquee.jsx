@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import {
   SiJavascript,
+  SiTypescript,
   SiReact,
   SiNodedotjs,
+  SiPython,
   SiPostgresql,
   SiSap,
   SiHtml5,
@@ -20,8 +22,10 @@ import { techMarquee } from '../data/skills'
 
 const iconMap = {
   JavaScript: SiJavascript,
+  TypeScript: SiTypescript,
   React: SiReact,
   'Node.js': SiNodedotjs,
+  Python: SiPython,
   PostgreSQL: SiPostgresql,
   'SAP HANA': SiSap,
   HTML5: SiHtml5,

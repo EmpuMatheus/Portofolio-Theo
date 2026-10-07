@@ -1,0 +1,2111 @@
+# UI / UX Design Specification
+# Matheus — Web Developer & System Builder
+
+**Document:** UI_UX.md  
+**Project:** Personal Portfolio  
+**Owner:** Matheus  
+**Version:** 1.0  
+**Design Direction:** Modern Futuristic Developer Workspace
+
+---
+
+# 1. Design Vision
+
+The portfolio should feel like entering the personal digital workspace of:
+
+> **Matheus — Web Developer & System Builder**
+
+The visual experience should combine:
+
+- Developer workspace
+- Terminal interface
+- Modern portfolio
+- Engineering dashboard
+- Minimal futuristic UI
+- Professional personal branding
+
+The design should immediately communicate:
+
+> Code. Systems. Infrastructure.
+
+Primary brand message:
+
+> **From Interface to Infrastructure.**
+
+The website must feel technical and futuristic without becoming overly cyberpunk, gaming-oriented, or visually noisy.
+
+---
+
+# 2. Visual Reference Direction
+
+Use the provided portfolio screenshot as the main visual inspiration.
+
+Important characteristics to preserve:
+
+- Dark navy background
+- Centered hero composition
+- Neon green accents
+- Developer terminal visual
+- Floating code editor
+- Ambient purple/green glow
+- Technology marquee
+- Compact navigation
+- Technical background pattern
+- Strong developer identity
+- Clean section separation
+
+However:
+
+> DO NOT copy the reference pixel-for-pixel.
+
+The final design must feel original and specifically designed for Matheus.
+
+---
+
+# 3. Brand Identity
+
+## Primary Identity
+
+```text
+MATHEUS
+Web Developer & System Builder
+```
+
+## Primary Tagline
+
+```text
+From Interface to Infrastructure.
+```
+
+## Supporting Identity
+
+```text
+Developer.
+Problem Solver.
+System Builder.
+```
+
+---
+
+# 4. Logo / Wordmark
+
+Preferred navbar branding:
+
+```text
+</> Matheus
+```
+
+Alternative:
+
+```text
+<Matheus />
+```
+
+Alternative:
+
+```text
+Matheus.dev
+```
+
+Preferred option:
+
+> `<Matheus />`
+
+The `<` and `/>` characters can use the primary green accent.
+
+Example:
+
+```text
+< Matheus />
+↑           ↑
+green       green
+```
+
+Do not create a large complicated logo.
+
+The wordmark itself should become the identity.
+
+---
+
+# 5. Color System
+
+The interface should primarily use dark neutral colors.
+
+## Main Background
+
+```css
+--background-primary: #050914;
+```
+
+Usage:
+
+- Main page background
+- Hero
+- Major sections
+
+---
+
+## Secondary Background
+
+```css
+--background-secondary: #080E1C;
+```
+
+Usage:
+
+- Alternate sections
+- Navbar
+- Footer
+- Section separation
+
+---
+
+## Surface / Cards
+
+```css
+--surface-primary: #0B1220;
+--surface-secondary: #0F172A;
+```
+
+Used for:
+
+- Cards
+- Terminal
+- Project containers
+- Technical panels
+
+---
+
+## Border
+
+```css
+--border-default: rgba(255, 255, 255, 0.08);
+--border-hover: rgba(74, 222, 128, 0.45);
+```
+
+Borders should remain thin.
+
+Preferred:
+
+```css
+border: 1px solid;
+```
+
+Avoid thick borders.
+
+---
+
+# 6. Accent Colors
+
+## Primary Green
+
+```css
+--green-primary: #22C55E;
+```
+
+## Bright Green
+
+```css
+--green-bright: #4ADE80;
+```
+
+Used for:
+
+- CTA
+- Active navigation
+- Terminal status
+- Important keywords
+- Hover borders
+- Small highlights
+
+Green should NOT dominate the entire screen.
+
+Approximately:
+
+```text
+Dark colors     80%
+White / Gray    15%
+Green            4%
+Purple / Blue    1%
+```
+
+---
+
+# 7. Ambient Accent
+
+Purple may be used ONLY for ambient lighting.
+
+```css
+--purple-glow: #8B5CF6;
+```
+
+Optional blue:
+
+```css
+--blue-glow: #3B82F6;
+```
+
+Do not use purple heavily on buttons or text.
+
+Purple should primarily exist as blurred background light.
+
+---
+
+# 8. Text Colors
+
+Primary:
+
+```css
+--text-primary: #F8FAFC;
+```
+
+Secondary:
+
+```css
+--text-secondary: #94A3B8;
+```
+
+Muted:
+
+```css
+--text-muted: #64748B;
+```
+
+Green highlight:
+
+```css
+--text-accent: #4ADE80;
+```
+
+Never use pure white everywhere.
+
+---
+
+# 9. Typography
+
+Use two typography systems.
+
+## Interface Typography
+
+Preferred:
+
+```text
+Geist
+```
+
+Fallback:
+
+```text
+Inter
+system-ui
+sans-serif
+```
+
+Used for:
+
+- Navigation
+- Headings
+- Paragraphs
+- Buttons
+- Project information
+
+---
+
+## Developer Typography
+
+Preferred:
+
+```text
+JetBrains Mono
+```
+
+Fallback:
+
+```text
+Fira Code
+monospace
+```
+
+Used for:
+
+- Terminal
+- Code editor
+- Technical labels
+- Small metadata
+- Project numbers
+
+---
+
+# 10. Typography Scale
+
+Desktop Hero:
+
+```css
+font-size: clamp(3rem, 6vw, 5.5rem);
+font-weight: 700;
+line-height: 0.95;
+```
+
+Section headings:
+
+```css
+font-size: clamp(2rem, 4vw, 3.5rem);
+font-weight: 700;
+```
+
+Body:
+
+```css
+font-size: 1rem;
+line-height: 1.7;
+```
+
+Small technical text:
+
+```css
+font-size: 0.75rem;
+```
+
+Avoid extremely oversized headings.
+
+---
+
+# 11. Global Layout
+
+Maximum content width:
+
+```css
+max-width: 1200px;
+```
+
+Wide project sections may use:
+
+```css
+max-width: 1280px;
+```
+
+Center content using:
+
+```css
+margin-inline: auto;
+```
+
+Desktop horizontal padding:
+
+```text
+32px – 48px
+```
+
+Tablet:
+
+```text
+24px
+```
+
+Mobile:
+
+```text
+18px – 20px
+```
+
+---
+
+# 12. Section Spacing
+
+Desktop:
+
+```text
+120px – 160px
+```
+
+Tablet:
+
+```text
+96px
+```
+
+Mobile:
+
+```text
+72px – 88px
+```
+
+Sections should have generous breathing room.
+
+Do not make the page feel cramped.
+
+---
+
+# 13. Navbar
+
+Navbar should be compact and technical.
+
+Desktop layout:
+
+```text
+┌───────────────────────────────────────────────────────────┐
+│ <Matheus />       About  Skills  Projects  Experience Contact │
+└───────────────────────────────────────────────────────────┘
+```
+
+Height:
+
+```text
+64px – 72px
+```
+
+Initial state:
+
+```text
+transparent / very dark
+```
+
+Scrolled state:
+
+```text
+dark translucent background
+subtle backdrop blur
+bottom border
+```
+
+Example:
+
+```css
+background: rgba(5, 9, 20, 0.8);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid rgba(255,255,255,.06);
+```
+
+Do not use excessive blur.
+
+---
+
+# 14. Navbar Interaction
+
+Hover:
+
+```text
+text gray → white
+```
+
+Active section:
+
+```text
+green
+```
+
+Optional active indicator:
+
+```text
+small green dot
+```
+
+or:
+
+```text
+thin green underline
+```
+
+Transition:
+
+```css
+transition-duration: 200ms;
+```
+
+---
+
+# 15. Mobile Navigation
+
+Mobile navbar:
+
+```text
+<Matheus />                         ☰
+```
+
+Click hamburger:
+
+```text
+┌───────────────────────────┐
+│ About                     │
+│ Skills                    │
+│ Projects                  │
+│ Experience                │
+│ Contact                   │
+└───────────────────────────┘
+```
+
+Menu should slide/fade smoothly.
+
+Avoid full-screen complicated navigation.
+
+---
+
+# 16. Hero Section
+
+The Hero should occupy approximately:
+
+```css
+min-height: 90vh;
+```
+
+Composition:
+
+```text
+                    Hello World! I'm
+
+                       MATHEUS
+
+              Web Developer & System Builder
+
+        I build modern web applications, business
+        systems, and digital solutions that solve
+                    real problems.
+
+           [ </> View Projects ] [ Contact Me ]
+
+
+                     DEVELOPER
+                     WORKSPACE
+```
+
+Hero content should be center aligned.
+
+---
+
+# 17. Hero Greeting
+
+Use:
+
+```text
+Hello World! I'm
+```
+
+Style:
+
+```text
+JetBrains Mono
+green
+small
+```
+
+Optional terminal prefix:
+
+```text
+> Hello World! I'm
+```
+
+Do not animate the entire sentence repeatedly.
+
+---
+
+# 18. Hero Name
+
+Display:
+
+```text
+MATHEUS
+```
+
+or:
+
+```text
+Matheus
+```
+
+Preferred:
+
+```text
+MATHEUS
+```
+
+The name should be one of the largest visual elements.
+
+Color:
+
+```text
+#F8FAFC
+```
+
+Optional subtle glow only.
+
+Do NOT apply rainbow gradient.
+
+---
+
+# 19. Hero Role
+
+Display:
+
+```text
+Web Developer & System Builder
+```
+
+Use slightly smaller typography than the name.
+
+Possible styling:
+
+```text
+Web Developer &
+SYSTEM BUILDER
+```
+
+Highlight:
+
+```text
+System Builder
+```
+
+with green.
+
+---
+
+# 20. Hero Description
+
+Maximum width:
+
+```css
+max-width: 620px;
+```
+
+Example:
+
+```text
+I build modern web applications, business systems,
+and digital solutions that turn real operational
+problems into reliable software.
+```
+
+Color:
+
+```text
+text-secondary
+```
+
+---
+
+# 21. Hero CTA
+
+Primary:
+
+```text
+</> View Projects
+```
+
+Secondary:
+
+```text
+Contact Me
+```
+
+Primary button:
+
+```text
+green background
+dark text
+```
+
+Secondary:
+
+```text
+transparent
+thin border
+```
+
+Hover primary:
+
+```text
+slightly brighter
+subtle glow
+translateY(-2px)
+```
+
+Do not create large bouncing effects.
+
+---
+
+# 22. Hero Background
+
+Use a very subtle developer pattern.
+
+Possible symbols:
+
+```text
+{}
+</>
+[]
+#
+_
+01
+()
+```
+
+Opacity:
+
+```text
+1% – 3%
+```
+
+The pattern should almost disappear unless the visitor looks carefully.
+
+---
+
+# 23. Ambient Hero Glow
+
+Behind developer workspace:
+
+```text
+purple glow     ← terminal →     green glow
+```
+
+Use large blurred radial gradients.
+
+Example concept:
+
+```css
+filter: blur(100px);
+opacity: .15;
+```
+
+The glow must NOT reduce text readability.
+
+---
+
+# 24. Developer Workspace
+
+This is the main visual identity of the Hero.
+
+Structure:
+
+```text
+            ┌───────────────────────────────┐
+            │ ● ● ● developer@workspace    │
+            ├───────────────────────────────┤
+            │                               │
+            │ $ whoami                      │
+            │ Matheus                       │
+            │ Web Developer                 │
+            │                               │
+            │ $ cat stack.txt               │
+            │ React Node PostgreSQL         │
+            │ Linux Docker SAP HANA         │
+            │                               │
+            │ $ status                      │
+            │ Building useful things... █   │
+            │                               │
+            └───────────────────────────────┘
+
+                              ┌───────────────┐
+                              │ developer.js  │
+                              │               │
+                              │ const dev = { │
+                              │ ...           │
+                              │ };            │
+                              └───────────────┘
+```
+
+---
+
+# 25. Terminal Window
+
+Terminal should feel authentic but simple.
+
+Header:
+
+```text
+● ● ●    matheus@workspace
+```
+
+Body:
+
+```text
+$ whoami
+
+Matheus
+Web Developer & System Builder
+
+
+$ focus
+
+Web Applications
+Business Systems
+Infrastructure
+
+
+$ status
+
+● ONLINE
+```
+
+Terminal text should use:
+
+```text
+JetBrains Mono
+```
+
+---
+
+# 26. Terminal Animation
+
+Allowed:
+
+- Blinking cursor
+- Initial typing sequence
+- Small status pulse
+
+Typing animation should run only once after page load.
+
+Do NOT continuously delete and retype text.
+
+Cursor:
+
+```text
+█
+```
+
+Blink approximately:
+
+```text
+700ms – 1000ms
+```
+
+---
+
+# 27. Floating Code Editor
+
+Place a smaller code editor overlapping the terminal.
+
+Example:
+
+```javascript
+const matheus = {
+  role: "Web Developer",
+
+  focus: [
+    "Web Apps",
+    "Business Systems",
+    "Infrastructure"
+  ],
+
+  status: "building"
+};
+```
+
+The editor should look like a mini IDE window.
+
+Use syntax highlighting colors sparingly.
+
+---
+
+# 28. Workspace Decorative Line
+
+Inspired by the reference, create an abstract line/container surrounding part of the workspace.
+
+Possible:
+
+```text
+purple ─────── green
+```
+
+Use gradient border or SVG.
+
+It should visually connect:
+
+```text
+code → system → infrastructure
+```
+
+Do not make it too prominent.
+
+---
+
+# 29. Technology Marquee
+
+Position directly after Hero.
+
+Height:
+
+```text
+50px – 64px
+```
+
+Background:
+
+```text
+secondary dark
+```
+
+Top/bottom border:
+
+```text
+1px subtle
+```
+
+Items:
+
+```text
+JavaScript
+React
+Node.js
+PostgreSQL
+SAP HANA
+Tailwind
+Git
+Docker
+Linux
+Nginx
+MikroTik
+Ubiquiti
+Vite
+```
+
+Layout:
+
+```text
+React   Node.js   PostgreSQL   Docker   Linux   MikroTik →
+```
+
+Animation:
+
+```text
+continuous horizontal movement
+```
+
+Duration:
+
+```text
+25s – 40s
+```
+
+Pause on hover.
+
+---
+
+# 30. Section Heading System
+
+Use consistent section headings.
+
+Example:
+
+```text
+01 / ABOUT
+
+About Me
+      ^^
+      green
+```
+
+or:
+
+```text
+About [Me]
+```
+
+Preferred:
+
+```text
+01 / ABOUT
+
+About Me.
+```
+
+The section number uses:
+
+```text
+JetBrains Mono
+green
+```
+
+This reinforces the technical identity.
+
+---
+
+# 31. About Section
+
+Desktop:
+
+```text
+┌─────────────────────────────────────────────────────────┐
+│                                                         │
+│  ABOUT ME                         DEVELOPER.PROFILE      │
+│                                                         │
+│  I'm a Web Developer focused     ┌───────────────────┐ │
+│  on building practical systems.  │ Frontend          │ │
+│                                  │ React / Vite      │ │
+│  I enjoy connecting frontend,    │                   │ │
+│  backend, database, infra and    │ Backend           │ │
+│  networking.                     │ Node / Express    │ │
+│                                  │                   │ │
+│                                  │ ● ONLINE          │ │
+│                                  └───────────────────┘ │
+└─────────────────────────────────────────────────────────┘
+```
+
+Use approximately:
+
+```text
+55 / 45
+```
+
+column ratio.
+
+---
+
+# 32. Developer Profile Panel
+
+The profile panel should resemble a small system status dashboard.
+
+Header:
+
+```text
+developer.profile
+```
+
+Rows:
+
+```text
+Frontend
+React / Vite / Tailwind
+
+Backend
+Node.js / Express
+
+Database
+PostgreSQL / SAP HANA
+
+Infrastructure
+Linux / Docker / Nginx
+
+Network
+MikroTik / Ubiquiti
+```
+
+Bottom:
+
+```text
+STATUS ● ONLINE
+```
+
+Green pulse may be used on ONLINE.
+
+---
+
+# 33. Skills Section
+
+Do not use generic progress bars.
+
+Use categorized technical cards.
+
+Desktop:
+
+```text
+┌────────────────┐ ┌────────────────┐ ┌────────────────┐
+│ FRONTEND       │ │ BACKEND        │ │ DATABASE       │
+│                │ │                │ │                │
+│ React          │ │ Node.js        │ │ PostgreSQL     │
+│ Vite           │ │ Express        │ │ SAP HANA       │
+│ Tailwind       │ │ REST API       │ │ SQLite         │
+└────────────────┘ └────────────────┘ └────────────────┘
+```
+
+Second row:
+
+```text
+Enterprise
+Infrastructure
+Networking
+Tools
+```
+
+---
+
+# 34. Skill Card
+
+Default:
+
+```text
+dark surface
+thin border
+```
+
+Hover:
+
+```text
+border → subtle green
+translateY(-4px)
+```
+
+Optional:
+
+```text
+tiny terminal-style category number
+```
+
+Example:
+
+```text
+[01]
+FRONTEND
+```
+
+---
+
+# 35. Featured Projects
+
+Projects must be visually dominant.
+
+Heading:
+
+```text
+03 / PROJECTS
+
+Featured Projects.
+```
+
+Subtitle:
+
+```text
+Systems and applications I've built to solve real problems.
+```
+
+---
+
+# 36. Featured Project Layout
+
+Alternate layout.
+
+Project 01:
+
+```text
+┌─────────────────────────┐
+│                         │
+│    WHS SCREENSHOT       │        01 / FEATURED
+│                         │
+│                         │        WHS DIGITAL
+└─────────────────────────┘
+                                  Stock Opname System
+
+                                  Description...
+
+                                  React
+                                  Node.js
+                                  PostgreSQL
+
+                                  Case Study →
+```
+
+Project 02:
+
+Reverse the layout.
+
+```text
+Project information ← Screenshot
+```
+
+This prevents repetitive page rhythm.
+
+---
+
+# 37. Project Screenshot
+
+Use actual project screenshots whenever available.
+
+Image ratio:
+
+```text
+16:10
+```
+
+or:
+
+```text
+16:9
+```
+
+Screenshot container:
+
+```text
+dark border
+8px – 12px radius
+```
+
+Add a fake application window header if appropriate:
+
+```text
+● ● ●    WHS Digital
+```
+
+Do NOT heavily modify screenshots.
+
+The real application should remain visible.
+
+---
+
+# 38. Project Card Hover
+
+On hover:
+
+Screenshot:
+
+```css
+transform: scale(1.02);
+```
+
+Border:
+
+```text
+subtle green
+```
+
+Glow:
+
+```text
+very subtle
+```
+
+Transition:
+
+```text
+250ms
+```
+
+Avoid:
+
+```text
+large rotation
+3D tilt
+large scale
+```
+
+---
+
+# 39. Project Number
+
+Use:
+
+```text
+01
+02
+03
+```
+
+Font:
+
+```text
+JetBrains Mono
+```
+
+Color:
+
+```text
+muted
+```
+
+Hover/project active:
+
+```text
+green
+```
+
+---
+
+# 40. Technology Tags
+
+Example:
+
+```text
+[ React ] [ Node.js ] [ PostgreSQL ]
+```
+
+Style:
+
+```text
+small
+monospace
+dark background
+thin border
+```
+
+Do not make them large colorful pills.
+
+---
+
+# 41. Case Study Button
+
+Preferred:
+
+```text
+View Case Study →
+```
+
+Minimal style.
+
+Hover:
+
+```text
+arrow moves 4px right
+text becomes green
+```
+
+---
+
+# 42. Experience Timeline
+
+Use vertical technical timeline.
+
+Desktop:
+
+```text
+2026 ───── ● ───────────── Web Developer
+           │
+           │               Description
+           │
+2025 ───── ● ───────────── ...
+```
+
+Timeline line:
+
+```text
+thin gray
+```
+
+Active point:
+
+```text
+green
+```
+
+---
+
+# 43. Developer Philosophy
+
+Create a large visual break.
+
+Layout:
+
+```text
+I DON'T JUST
+BUILD INTERFACES.
+
+I BUILD SYSTEMS
+THAT SOLVE PROBLEMS.
+```
+
+Highlight:
+
+```text
+SYSTEMS
+```
+
+in green.
+
+Background can contain:
+
+```text
+very subtle code/grid pattern
+```
+
+---
+
+# 44. Contact Section
+
+Heading:
+
+```text
+05 / CONTACT
+
+Let's Build Something.
+```
+
+Description:
+
+```text
+Have a project, collaboration,
+or opportunity in mind?
+
+Let's talk.
+```
+
+Contact methods:
+
+```text
+Email
+GitHub
+LinkedIn
+```
+
+Optional terminal-style CTA:
+
+```text
+$ contact matheus
+
+> Ready for collaboration.
+```
+
+---
+
+# 45. Contact Form
+
+If implemented:
+
+```text
+Name
+Email
+Message
+```
+
+Inputs:
+
+```text
+dark
+thin border
+minimal radius
+```
+
+Focus:
+
+```text
+green border
+subtle glow
+```
+
+Button:
+
+```text
+Send Message →
+```
+
+---
+
+# 46. Footer
+
+Minimal.
+
+Example:
+
+```text
+<Matheus />
+
+From Interface to Infrastructure.
+
+GitHub   LinkedIn
+
+────────────────────────────────────
+
+Designed & Built with Code.
+© 2026 Matheus
+```
+
+Year must be dynamic.
+
+---
+
+# 47. Background Grid
+
+Optional background grid:
+
+```css
+background-image:
+  linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+
+background-size: 40px 40px;
+```
+
+Grid should only be visible subtly.
+
+---
+
+# 48. Scroll Reveal
+
+Sections may animate:
+
+```text
+opacity: 0 → 1
+translateY: 20px → 0
+```
+
+Duration:
+
+```text
+500ms – 700ms
+```
+
+Trigger once.
+
+Do NOT replay every time the visitor scrolls.
+
+---
+
+# 49. Hover Philosophy
+
+Hover effects should communicate interactivity.
+
+Allowed:
+
+```text
+border glow
+text color
+small translate
+small scale
+arrow movement
+```
+
+Avoid:
+
+```text
+large rotations
+aggressive scaling
+constant floating
+3D card tilting everywhere
+```
+
+---
+
+# 50. Animation Rules
+
+Animation hierarchy:
+
+### Level 1 — Functional
+
+Required.
+
+```text
+Navigation
+Mobile menu
+Modal
+Project interaction
+```
+
+### Level 2 — Branding
+
+Allowed.
+
+```text
+Terminal typing
+Cursor blinking
+Tech marquee
+Status pulse
+```
+
+### Level 3 — Decorative
+
+Use sparingly.
+
+```text
+Glow movement
+Background particles
+Floating objects
+```
+
+Performance takes priority over decorative animation.
+
+---
+
+# 51. Mobile Hero
+
+Mobile layout:
+
+```text
+<Matheus />                ☰
+
+
+Hello World! I'm
+
+MATHEUS
+
+Web Developer &
+System Builder
+
+Description...
+
+[ View Projects ]
+
+[ Contact Me ]
+
+
+┌───────────────────────┐
+│ matheus@workspace     │
+│                       │
+│ $ whoami              │
+│ Matheus               │
+│                       │
+│ $ status              │
+│ ● ONLINE              │
+└───────────────────────┘
+```
+
+The terminal must remain readable.
+
+---
+
+# 52. Mobile Workspace
+
+On mobile:
+
+- Reduce terminal content
+- Reduce floating editor size
+- Hide editor if screen is too narrow
+- Reduce glow
+- Remove unnecessary decorative lines
+- Maintain terminal readability
+
+Below approximately:
+
+```text
+400px
+```
+
+the floating editor may be removed entirely.
+
+---
+
+# 53. Mobile Projects
+
+Projects become:
+
+```text
+Screenshot
+
+01 / FEATURED
+
+WHS DIGITAL
+
+Description
+
+[ React ] [ Node ] [ PostgreSQL ]
+
+View Case Study →
+```
+
+Single column.
+
+Screenshot always appears before project information.
+
+---
+
+# 54. Breakpoints
+
+Recommended:
+
+```text
+sm: 640px
+md: 768px
+lg: 1024px
+xl: 1280px
+2xl: 1536px
+```
+
+Do not design only around exact breakpoint widths.
+
+Layouts should remain fluid.
+
+---
+
+# 55. Border Radius
+
+Keep radius relatively restrained.
+
+Small elements:
+
+```text
+6px
+```
+
+Cards:
+
+```text
+8px – 12px
+```
+
+Large project container:
+
+```text
+12px
+```
+
+Avoid excessive:
+
+```text
+24px+
+```
+
+The portfolio should feel technical rather than overly soft.
+
+---
+
+# 56. Shadows
+
+Avoid generic large black shadows.
+
+Prefer glow.
+
+Example:
+
+```css
+box-shadow:
+  0 0 30px rgba(34,197,94,.08);
+```
+
+Only interactive/important elements should receive glow.
+
+---
+
+# 57. Icon Style
+
+Use:
+
+```text
+Lucide
+```
+
+Preferred:
+
+```text
+stroke icons
+```
+
+Avoid mixing many icon styles.
+
+Technology logos can use their official recognizable forms.
+
+---
+
+# 58. Cursor
+
+Default browser cursor should remain for most elements.
+
+Pointer:
+
+```text
+buttons
+links
+interactive cards
+```
+
+Do NOT implement a custom animated cursor for V1.
+
+---
+
+# 59. Loading
+
+Do NOT create a long loading screen.
+
+The website should appear immediately.
+
+If loading state is required:
+
+```text
+<Matheus />
+```
+
+for a very short period only.
+
+Prefer no loader.
+
+---
+
+# 60. Accessibility
+
+Interactive elements must have visible focus states.
+
+Example:
+
+```css
+outline: 2px solid #4ADE80;
+outline-offset: 4px;
+```
+
+Do not remove outlines without replacement.
+
+---
+
+# 61. Reduced Motion
+
+Respect:
+
+```css
+@media (prefers-reduced-motion: reduce)
+```
+
+Disable:
+
+```text
+marquee
+typing animation
+scroll reveal movement
+ambient animation
+```
+
+Keep content immediately visible.
+
+---
+
+# 62. Performance Rules
+
+Avoid:
+
+- Background videos
+- WebGL
+- Three.js
+- Large particle libraries
+- Excessive backdrop blur
+- Huge image assets
+- Multiple animation libraries
+
+Prefer:
+
+```text
+CSS
+SVG
+Framer Motion only when necessary
+```
+
+---
+
+# 63. Image Optimization
+
+Project screenshots:
+
+Preferred:
+
+```text
+WebP
+```
+
+Optional:
+
+```text
+AVIF
+```
+
+Use:
+
+```text
+loading="lazy"
+```
+
+except critical Hero assets.
+
+Provide responsive image sizing.
+
+---
+
+# 64. Desktop Visual Hierarchy
+
+Visitor attention should follow:
+
+```text
+1. MATHEUS
+       ↓
+2. Web Developer & System Builder
+       ↓
+3. Developer Workspace
+       ↓
+4. Technology Stack
+       ↓
+5. About
+       ↓
+6. Featured Projects
+       ↓
+7. Skills / Experience
+       ↓
+8. Philosophy
+       ↓
+9. Contact
+```
+
+Projects should receive more visual importance than Skills.
+
+---
+
+# 65. Page Rhythm
+
+Avoid having every section look like cards.
+
+Mix:
+
+```text
+Centered Hero
+
+↓
+
+Full-width marquee
+
+↓
+
+Two-column About
+
+↓
+
+Card-based Skills
+
+↓
+
+Large editorial Projects
+
+↓
+
+Timeline
+
+↓
+
+Large typography statement
+
+↓
+
+Minimal Contact
+```
+
+This creates visual variety.
+
+---
+
+# 66. Technical Microcopy
+
+Small technical labels may appear throughout the interface.
+
+Examples:
+
+```text
+SYSTEM.STATUS
+PROJECT.01
+DEVELOPER.PROFILE
+STACK.INDEX
+CURRENT.FOCUS
+AVAILABLE.ONLINE
+```
+
+Use sparingly.
+
+They should reinforce the developer identity without making the website difficult to understand.
+
+---
+
+# 67. Design Anti-Patterns
+
+DO NOT implement:
+
+- Rainbow gradients
+- Excessive glassmorphism
+- Giant rounded cards
+- Excessive blur
+- Constant floating animation
+- Heavy particle backgrounds
+- Fake skill percentages
+- Generic stock illustrations
+- Excessive emojis
+- Gaming HUD interfaces
+- Matrix rain
+- Fake hacking animations
+- Huge custom cursor
+- Auto-playing background videos
+
+---
+
+# 68. Originality Requirement
+
+The provided visual reference establishes the aesthetic direction.
+
+Use its:
+
+```text
+dark developer atmosphere
+terminal concept
+green accent
+workspace composition
+technology marquee
+```
+
+But create original:
+
+```text
+layout details
+terminal content
+project presentation
+about panel
+developer status
+section structure
+micro-interactions
+branding
+```
+
+The website must clearly belong to:
+
+> **MATHEUS**
+
+not to the portfolio used as reference.
+
+---
+
+# 69. Final Design Test
+
+Before considering the UI complete, ask:
+
+### Does it look like a developer portfolio?
+
+Yes.
+
+### Does it look modern?
+
+Yes.
+
+### Does it look technical?
+
+Yes.
+
+### Does it feel futuristic?
+
+Yes, subtly.
+
+### Does it look like a gaming website?
+
+No.
+
+### Are real projects visually important?
+
+Yes.
+
+### Does it communicate more than frontend development?
+
+Yes.
+
+### Does it work well on mobile?
+
+Yes.
+
+### Is Matheus clearly the personal brand?
+
+Yes.
+
+---
+
+# 70. Final Visual Identity
+
+The final experience should communicate:
+
+```text
+                <Matheus />
+
+        WEB DEVELOPER
+              +
+        SYSTEM BUILDER
+
+              ↓
+
+    FROM INTERFACE
+    TO INFRASTRUCTURE.
+```
+
+Visual personality:
+
+```text
+Dark
+Technical
+Clean
+Modern
+Futuristic
+Professional
+Developer-focused
+```
+
+The visitor should feel as if they are exploring Matheus' developer workspace rather than browsing a generic portfolio template.

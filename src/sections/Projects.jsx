@@ -45,9 +45,13 @@ export default function Projects() {
                     isReversed ? 'lg:order-2' : 'lg:order-1'
                   }`}
                 >
-                  <Link to={`/projects/${project.id}`}>
+                  {project.images && project.images.length > 0 ? (
                     <ProjectImage project={project} />
-                  </Link>
+                  ) : (
+                    <Link to={`/projects/${project.id}`}>
+                      <ProjectImage project={project} />
+                    </Link>
+                  )}
                 </div>
 
                 <div

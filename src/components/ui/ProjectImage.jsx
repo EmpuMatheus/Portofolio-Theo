@@ -1,26 +1,16 @@
-export default function ProjectImage({ project }) {
-  const hasImage = project.images && project.images.length > 0
+import ProjectImageCarousel from './ProjectImageCarousel'
 
-  if (hasImage) {
+export default function ProjectImage({ project }) {
+  const hasImages = project.images && project.images.length > 0
+
+  if (hasImages) {
     return (
-      <div className="rounded-lg border border-border-default bg-surface-primary overflow-hidden group-hover:border-green-bright/30 transition-colors duration-250">
-        <div className="flex items-center gap-1.5 px-4 py-2.5 border-b border-border-default bg-surface-secondary/50">
-          <div className="flex items-center gap-1.5" aria-hidden="true">
-            <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-            <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-            <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-          </div>
-          <span className="font-mono text-[11px] text-text-muted ml-2">
-            {project.title}
-          </span>
-        </div>
-        <img
-          src={project.images[0]}
-          alt={`${project.title} screenshot`}
-          className="w-full aspect-[16/10] object-cover"
-          loading="lazy"
-        />
-      </div>
+      <ProjectImageCarousel
+        images={project.images}
+        projectName={project.title}
+        autoplay
+        aspectRatio="16 / 9"
+      />
     )
   }
 
