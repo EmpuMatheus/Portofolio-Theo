@@ -36,9 +36,9 @@ export const skills = [
     number: "03",
     skills: [
       "PostgreSQL",
+      "Supabase",
       "SAP HANA",
       "SQLite",
-      "SQL",
       "Database Design",
       "SQL Query Development",
       "Stored Procedures",
@@ -67,6 +67,7 @@ export const skills = [
     label: "INFRASTRUCTURE",
     number: "05",
     skills: [
+      "Windows",
       "Linux",
       "Docker",
       "Nginx",
@@ -85,8 +86,8 @@ export const skills = [
     number: "06",
     skills: [
       "MikroTik",
-      "Ubiquiti",
-      "UniFi",
+      "Ubiquiti / UniFi",
+      "VPN",
       "VLAN",
       "DHCP",
       "NAT",
@@ -106,6 +107,7 @@ export const skills = [
       "TypeScript",
       "Python",
       "PHP",
+      "SQL",
     ],
     description:
       "Programming languages I use to build frontend interfaces, backend services, and automation.",

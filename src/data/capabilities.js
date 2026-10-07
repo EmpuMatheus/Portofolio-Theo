@@ -22,7 +22,7 @@ export const capabilities = [
   {
     title: "Infrastructure",
     description:
-      "Deploying and supporting applications using Linux, Docker, Nginx, VPS environments, and modern hosting platforms.",
+      "Deploying and supporting applications using Linux, Proxmox, Docker, Nginx, VPS environments, and modern hosting platforms.",
   },
   {
     title: "Networking",

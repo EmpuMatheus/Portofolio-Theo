@@ -55,7 +55,7 @@ export const experience = [
   {
     id: "mmc-jersey",
     company: "MMC Jersey",
-    role: "Graphic Designer",
+    role: "Graphic Designer/Digital Marketing",
     period: "2021 \u2014 Present",
     current: true,
     responsibilities: [
